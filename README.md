@@ -78,6 +78,7 @@ const StyledProgressiveImage = styled(ProgressiveImage)`
 
 ```
 $ yarn run format
+$ yarn run eslint
 $ yarn run test:watch
 ```
 
