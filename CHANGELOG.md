@@ -3,7 +3,11 @@
 ## [HEAD]
 > Unreleased
 
+## [v1.0.3]
+> May 02, 2017
+
 * feat(eslint): setup eslint.
+* docs(README): add gif demo.
 
 ## [v1.0.2]
 > May 02, 2017
