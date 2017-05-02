@@ -43,7 +43,7 @@ const DELAY = 200;
 const ProgressiveImage = componentFromStream(propStream => {
   const props$ = Observable.from(propStream);
   const placeholder$ = props$.pluck('placeholder');
-  const src$ = props$.pluck('src').switchMap(loadImage).startWith('');
+  const src$ = props$.pluck('src').switchMap(loadImage);
 
   const isLoaded$ = Observable.merge(
     placeholder$.mapTo(false),

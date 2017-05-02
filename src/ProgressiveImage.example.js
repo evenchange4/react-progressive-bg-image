@@ -29,7 +29,6 @@ storiesOf('ProgressiveImage', module)
     () => {
       const CoverProgressiveImage = styled(ProgressiveImage)`
         height: 80vh;
-        background-color: aliceblue;
         background-size: cover;
         background-attachment: fixed;
         background-position-y: 70%;
