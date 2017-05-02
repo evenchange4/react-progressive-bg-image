@@ -4,8 +4,13 @@
   "description": "Medium style progressive background image for React",
   "main": "lib/index.js",
   "scripts": {
+    "clean": "rm -rf lib",
+    "prebuild": "npm run clean",
+    "build": "NODE_ENV=production babel src --out-dir lib --ignore example.js,test.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --trailing-comma all --single-quote --write 'src/**/*.js'"
+    "start": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "format": "prettier --trailing-comma all --single-quote --write 'src/**/*.js' '.storybook/*.js'"
   },
   "author": "Michael Hsu <evenchange4@gmail.com>",
   "license": "MIT",
@@ -16,12 +21,24 @@
     "rxjs": "^5.3.0"
   },
   "devDependencies": {
+    "@kadira/react-storybook-addon-info": "^3.4.0",
+    "@kadira/storybook": "^2.21.0",
+    "@kadira/storybook-addon-options": "^1.0.2",
+    "babel-cli": "^6.24.1",
+    "babel-preset-react-app": "^2.2.0",
+    "normalize.css": "^6.0.0",
     "prettier": "^1.2.2",
     "react": "^15.5.4",
+    "react-dom": "^15.5.4",
     "styled-components": "next"
   },
   "peerDependencies": {
     "react": "^15.5.4",
     "styled-components": "next"
+  },
+  "babel": {
+    "presets": [
+      "react-app"
+    ]
   }
 }

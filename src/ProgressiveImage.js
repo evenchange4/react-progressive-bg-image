@@ -27,6 +27,7 @@ function loadImage(src) {
 }
 
 const Img = styled.div`
+  height: 100%;
   background-image: url(${props => props.src});
   background-repeat: no-repeat;
   opacity: ${props => (props.isLoaded ? 1 : 0.5)};
