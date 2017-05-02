@@ -24,8 +24,8 @@ storiesOf('ProgressiveImage', module)
     { inline: true, propTables: [ProgressiveImage] },
   )
   .addWithInfo(
-    'Cover image',
-    'Override style',
+    'Custim transition',
+    'Overrided with `transition: filter 1s linear;`',
     () => {
       const CoverProgressiveImage = styled(ProgressiveImage)`
         height: 80vh;
@@ -36,7 +36,7 @@ storiesOf('ProgressiveImage', module)
         background-position-x: center;
 
         /* Overrided */
-        transition: opacity 1s linear;
+        transition: filter 1s linear;
       `;
       return <CoverProgressiveImage src={image2} placeholder={image2X60} />;
     },
