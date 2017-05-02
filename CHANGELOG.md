@@ -4,7 +4,6 @@
 > Unreleased
 
 * feat(eslint): setup eslint.
-* fix(src): remove initial empty string.
 
 ## [v1.0.2]
 > May 02, 2017
