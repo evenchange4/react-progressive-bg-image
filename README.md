@@ -26,11 +26,12 @@
 [devDependency]: https://david-dm.org/evenchange4/react-progressive-bg-image#info=devDependencies
 [peerDependency-badge]: https://david-dm.org/evenchange4/react-progressive-bg-image/peer-status.svg?style=flat-square
 [peerDependency]: https://david-dm.org/evenchange4/react-progressive-bg-image#info=peerDependencies
-[![Greenkeeper badge](https://badges.greenkeeper.io/evenchange4/react-progressive-bg-image.svg)](https://greenkeeper.io/) [![prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+[![prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 ## Demo
 
-http://react-progressive-bg-image.netlify.com/
+-   http://react-progressive-bg-image.netlify.com/
+-   Responsive example: http://michaelhsu.tw/ [[Source code]](https://github.com/evenchange4/michaelhsu.tw/blob/master/src/components/CoverImage.js#L37-L44)
 
 ## Installation
 

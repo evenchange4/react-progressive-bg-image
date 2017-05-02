@@ -7,9 +7,12 @@ notifications:
   email: evenchange4@gmail.com
 
 script:
-  # - yarn run test
+  - yarn run test
   - yarn run build
   - yarn run build-storybook
+
+after_success:
+  - ./node_modules/.bin/codecov
 
 cache:
   yarn: true

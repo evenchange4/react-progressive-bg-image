@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render <ProgressiveImage> 1`] = `
+<ProgressiveImage
+  placeholder="small.jpg"
+  src="origin.jpg"
+>
+  <styled.div
+    isLoaded={false}
+    src="origin.jpg"
+  >
+    <div
+      className="sc-bdVaJa ckWEhJ"
+      src="origin.jpg"
+    />
+  </styled.div>
+</ProgressiveImage>
+`;
