@@ -2,19 +2,29 @@
   "name": "react-progressive-bg-image",
   "version": "1.0.0",
   "description": "Medium style progressive background image for React",
+  "repository": "evenchange4/react-progressive-bg-image.git",
+  "author": "Michael Hsu <evenchange4@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/evenchange4/react-progressive-bg-image/issues",
+    "email": "evenchange4@gmail.com"
+  },
+  "homepage": "https://github.com/evenchange4/react-progressive-bg-image#readme",
+  "files": [
+    "lib"
+  ],
   "main": "lib/index.js",
+  "license": "MIT",
   "scripts": {
     "clean": "rm -rf lib",
-    "prebuild": "npm run clean",
+    "prebuild": "yarn run clean",
     "build": "NODE_ENV=production babel src --out-dir lib --ignore example.js,test.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
+    "prepublish": "yarn run build",
     "format": "prettier --trailing-comma all --single-quote --write 'src/**/*.js' '.storybook/*.js'"
   },
-  "author": "Michael Hsu <evenchange4@gmail.com>",
-  "license": "MIT",
-  "repository": "https://github.com/evenchange4/react-progressive-bg-image.git",
+
   "dependencies": {
     "prop-types": "^15.5.8",
     "recompose": "^0.23.1",

@@ -1,0 +1,17 @@
+sudo: false
+language: node_js
+node_js:
+  - "7.5.0"
+
+notifications:
+  email: evenchange4@gmail.com
+
+script:
+  # - yarn run test
+  - yarn run build
+  - yarn run build-storybook
+
+cache:
+  yarn: true
+  directories:
+    - node_modules
