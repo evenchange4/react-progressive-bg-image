@@ -35,12 +35,12 @@ http://react-progressive-bg-image.netlify.com/
 ## Installation
 
 ```console
-$ npm i react-progressive-bg-image --save
+$ npm i react-progressive-bg-image styled-components@next --save
 // or
-$ yarn add react-progressive-bg-image
+$ yarn add react-progressive-bg-image styled-components@next
 ```
 
-## Requirements and Workflow
+## Requirements
 
 -   react `^15.5.4`
 -   styled-components `^2.0.0-15`
