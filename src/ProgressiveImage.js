@@ -30,10 +30,10 @@ const Img = styled.div`
   height: 100%;
   background-image: url(${props => props.image});
   background-repeat: no-repeat;
-  opacity: ${props => (props.isLoaded ? 1 : 0.5)};
   transition: opacity 0.3s linear;
 
-  filter: ${props => (props.isLoaded ? 'none' : 'blur(50px)')};
+  opacity: ${props => (props.isLoaded ? 1 : 0.5)};
+  filter: ${props => (props.isLoaded ? 'none' : 'blur(20px)')};
   /* this is needed so Safari keeps sharp edges */
   transform: ${props => (props.isLoaded ? 'none' : 'scale(1)')};
 `;

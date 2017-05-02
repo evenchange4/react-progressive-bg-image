@@ -1,0 +1,9 @@
+# dependencies
+/node_modules
+
+# testing
+/coverage
+
+# production
+/storybook-static
+/lib

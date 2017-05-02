@@ -11,7 +11,7 @@ exports[`should render <ProgressiveImage> 1`] = `
     src="origin.jpg"
   >
     <div
-      className="sc-bdVaJa dlHtGW"
+      className="sc-bdVaJa eilCag"
       src="origin.jpg"
     />
   </styled.div>

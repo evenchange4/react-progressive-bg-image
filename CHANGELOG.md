@@ -3,6 +3,8 @@
 ## [HEAD]
 > Unreleased
 
+* feat(eslint): setup eslint.
+
 ## [v1.0.2]
 > May 02, 2017
 

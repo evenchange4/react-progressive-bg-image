@@ -25,7 +25,7 @@ storiesOf('ProgressiveImage', module)
   )
   .addWithInfo(
     'Cover image',
-    '',
+    'Override style',
     () => {
       const CoverProgressiveImage = styled(ProgressiveImage)`
         height: 80vh;
@@ -34,6 +34,9 @@ storiesOf('ProgressiveImage', module)
         background-attachment: fixed;
         background-position-y: 70%;
         background-position-x: center;
+
+        /* Overrided */
+        transition: opacity 1s linear;
       `;
       return <CoverProgressiveImage src={image2} placeholder={image2X60} />;
     },
