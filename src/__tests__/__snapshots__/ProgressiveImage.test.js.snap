@@ -6,11 +6,12 @@ exports[`should render <ProgressiveImage> 1`] = `
   src="origin.jpg"
 >
   <styled.div
+    image="small.jpg"
     isLoaded={false}
     src="origin.jpg"
   >
     <div
-      className="sc-bdVaJa ckWEhJ"
+      className="sc-bdVaJa dlHtGW"
       src="origin.jpg"
     />
   </styled.div>
