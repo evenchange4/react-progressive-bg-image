@@ -20,15 +20,15 @@ import 'rxjs/add/observable/merge';
 function loadImage(src) {
   return new Promise((resolve, reject) => {
     const image = new Image();
-    image.src = src;
     image.onload = () => resolve(src);
     image.onerror = err => reject(err);
+    image.src = src;
   });
 }
 
 const Img = styled.div`
   height: 100%;
-  background-image: url(${props => props.src});
+  background-image: url(${props => props.image});
   background-repeat: no-repeat;
   opacity: ${props => (props.isLoaded ? 1 : 0.5)};
   transition: opacity 0.3s linear;
@@ -55,8 +55,8 @@ const ProgressiveImage = componentFromStream(propStream => {
   return props$.combineLatest(
     image$,
     isLoaded$,
-    ({ placeholder, ...otherProps }, src, isLoaded) => (
-      <Img src={src} isLoaded={isLoaded} {...otherProps} />
+    ({ placeholder, ...otherProps }, image, isLoaded) => (
+      <Img {...otherProps} image={image} isLoaded={isLoaded} />
     ),
   );
 });
