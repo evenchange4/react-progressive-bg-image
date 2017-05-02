@@ -33,6 +33,8 @@
 -   http://react-progressive-bg-image.netlify.com/
 -   Responsive example: http://michaelhsu.tw/ [[Source code]](https://github.com/evenchange4/michaelhsu.tw/blob/master/src/components/CoverImage.js#L37-L44)
 
+![DEMO](./docs/demo.gif)
+
 ## Installation
 
 ```console
