@@ -26,7 +26,7 @@
 [devDependency]: https://david-dm.org/evenchange4/react-progressive-bg-image#info=devDependencies
 [peerDependency-badge]: https://david-dm.org/evenchange4/react-progressive-bg-image/peer-status.svg?style=flat-square
 [peerDependency]: https://david-dm.org/evenchange4/react-progressive-bg-image#info=peerDependencies
-[![Greenkeeper badge](https://badges.greenkeeper.io/evenchange4/react-progressive-bg-image.svg)](https://greenkeeper.io/)
+[![Greenkeeper badge](https://badges.greenkeeper.io/evenchange4/react-progressive-bg-image.svg)](https://greenkeeper.io/) [![prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 ## Demo
 
@@ -35,15 +35,15 @@ http://react-progressive-bg-image.netlify.com/
 ## Installation
 
 ```console
-$ npm i react-progressive-bg-image
+$ npm i react-progressive-bg-image --save
 // or
 $ yarn add react-progressive-bg-image
 ```
 
 ## Requirements and Workflow
 
--   react `^2.0.0`
--   styled-components `^2.0.0`
+-   react `^15.5.4`
+-   styled-components `^2.0.0-15`
 
 ## Usage
 
