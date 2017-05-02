@@ -7,7 +7,7 @@
 /coverage
 
 # production
-/build
+/storybook-static
 /lib
 
 # misc
