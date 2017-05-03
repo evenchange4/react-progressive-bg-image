@@ -4,6 +4,7 @@
 > Unreleased
 
 * feat(normalize.css): upgrade to 7.0.0
+* chore(packages): yarn upgrade
 
 ## [v1.0.3]
 > May 02, 2017
