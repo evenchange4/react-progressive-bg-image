@@ -3,6 +3,8 @@
 ## [HEAD]
 > Unreleased
 
+* feat(normalize.css): upgrade to 7.0.0
+
 ## [v1.0.3]
 > May 02, 2017
 

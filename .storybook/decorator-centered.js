@@ -6,7 +6,6 @@ import 'normalize.css';
 injectGlobal`
   body {
     padding: 30px;
-    margin: 0;
   }
 `;
 

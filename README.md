@@ -6,6 +6,7 @@
 
 [![Dependency Status][dependency-badge]][dependency] [![devDependency Status][devDependency-badge]][devDependency] [![peerDependency Status][peerDependency-badge]][peerDependency]
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/evenchange4/react-progressive-bg-image.svg)](https://greenkeeper.io/)
 [![prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 ## Demo
