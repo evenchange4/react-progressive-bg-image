@@ -39,7 +39,9 @@ const StyledProgressiveImage = styled(ProgressiveImage)`
   height: 600px;
   background-size: contain;
   background-position-y: center;
-  background-position-x: center;
+
+  /* Overrided */
+  transition: filter 1s linear;
 `;
 
 <StyledProgressiveImage
@@ -51,7 +53,7 @@ const StyledProgressiveImage = styled(ProgressiveImage)`
 ## Property
 
 | **Prop**      |  **Type** |  **Required**  |  **Description** |
-| ------------- | --------- | -------------- | ---------------- | 
+| ------------- | --------- | -------------- | ---------------- |
 | `src`         | string    | yes            | Origin image     |
 | `placeholder` | string    | yes            | Small image      |
 
