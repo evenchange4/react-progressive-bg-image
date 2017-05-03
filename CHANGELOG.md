@@ -3,6 +3,8 @@
 ## [HEAD]
 > Unreleased
 
+* test(rx): add marble testing
+
 ## [v1.0.4]
 > May 03, 2017
 
