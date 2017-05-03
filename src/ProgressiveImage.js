@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 import componentFromStream from 'recompose/componentFromStream';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/combineLatest';
@@ -11,34 +10,14 @@ import 'rxjs/add/operator/delay';
 import 'rxjs/add/operator/merge';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/switchMap';
-import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/mapTo';
 import 'rxjs/add/observable/from';
 import 'rxjs/add/observable/of';
 import 'rxjs/add/observable/merge';
+import Img from './Img';
+import loadImage from './loadImage';
 
-function loadImage(src) {
-  return new Promise((resolve, reject) => {
-    const image = new Image();
-    image.onload = () => resolve(src);
-    image.onerror = err => reject(err);
-    image.src = src;
-  });
-}
-
-const Img = styled.div`
-  height: 100%;
-  background-image: url(${props => props.image});
-  background-repeat: no-repeat;
-  transition: opacity 0.3s linear;
-
-  opacity: ${props => (props.isLoaded ? 1 : 0.5)};
-  filter: ${props => (props.isLoaded ? 'none' : 'blur(20px)')};
-  /* this is needed so Safari keeps sharp edges */
-  transform: ${props => (props.isLoaded ? 'none' : 'scale(1)')};
-`;
-
-const DELAY = 200;
+export const DELAY = 200;
 
 const ProgressiveImage = componentFromStream(propStream => {
   const props$ = Observable.from(propStream);

@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render <Img> with isLoaded prop 1`] = `
+<Img
+  image="image.jpg"
+  isLoaded={true}
+>
+  <div
+    className="sc-bdVaJa eCbvYr"
+  />
+</Img>
+`;
+
+exports[`should render <Img> without isLoaded prop 1`] = `
+<Img
+  image="image.jpg"
+  isLoaded={false}
+>
+  <div
+    className="sc-bdVaJa gDpbjq"
+  />
+</Img>
+`;

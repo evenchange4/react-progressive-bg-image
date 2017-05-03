@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { storiesOf } from '@kadira/storybook';
-import ProgressiveImage from './ProgressiveImage';
+import ProgressiveImage from '.';
 import image1 from '../images/image1.jpg';
 import image1X60 from '../images/image1X60.jpg';
 import image2 from '../images/image2.jpg';
