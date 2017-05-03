@@ -1,5 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`should render <Img> with isLoaded prop 1`] = `
+<styled.div
+  image="image.jpg"
+  isLoaded={true}
+>
+  <div
+    className="sc-bdVaJa eCbvYr"
+  />
+</styled.div>
+`;
+
+exports[`should render <Img> without isLoaded prop 1`] = `
+<styled.div
+  image="image.jpg"
+>
+  <div
+    className="sc-bdVaJa gDpbjq"
+  />
+</styled.div>
+`;
+
 exports[`should render <ProgressiveImage> 1`] = `
 <ProgressiveImage
   placeholder="small.jpg"
@@ -12,6 +33,24 @@ exports[`should render <ProgressiveImage> 1`] = `
   >
     <div
       className="sc-bdVaJa eilCag"
+      src="origin.jpg"
+    />
+  </styled.div>
+</ProgressiveImage>
+`;
+
+exports[`should render <ProgressiveImage> 2`] = `
+<ProgressiveImage
+  placeholder="small.jpg"
+  src="origin.jpg"
+>
+  <styled.div
+    image="origin.jpg"
+    isLoaded={true}
+    src="origin.jpg"
+  >
+    <div
+      className="sc-bdVaJa lcptnG"
       src="origin.jpg"
     />
   </styled.div>

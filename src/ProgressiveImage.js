@@ -26,7 +26,7 @@ function loadImage(src) {
   });
 }
 
-const Img = styled.div`
+export const Img = styled.div`
   height: 100%;
   background-image: url(${props => props.image});
   background-repeat: no-repeat;
