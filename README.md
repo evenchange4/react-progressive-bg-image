@@ -1,5 +1,7 @@
 # react-progressive-bg-image
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/evenchange4/react-progressive-bg-image.svg)](https://greenkeeper.io/)
+
 > Medium style progressive background image for React based on [Styled-components](https://github.com/styled-components/styled-components).
 
 [![Travis][build-badge]][build] [![Codecov Status][codecov-badge]][codecov] [![npm package][npm-badge]][npm] [![npm downloads][npm-downloads]][npm] [![license][license-badge]][license]
