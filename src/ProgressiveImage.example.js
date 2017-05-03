@@ -9,22 +9,23 @@ import image2X60 from '../images/image2X60.jpg';
 
 storiesOf('ProgressiveImage', module)
   .addWithInfo(
-    'Simple image',
+    'Inline-style',
     'Based on styled-components.',
-    () => {
-      const StyledProgressiveImage = styled(ProgressiveImage)`
-        height: 600px;
-        background-size: contain;
-        background-position-y: center;
-        background-position-x: center;
-      `;
-
-      return <StyledProgressiveImage src={image1} placeholder={image1X60} />;
-    },
+    () => (
+      <ProgressiveImage
+        src={image1}
+        placeholder={image1X60}
+        style={{
+          height: 600,
+          backgroundSize: 'contain',
+          backgroundPosition: 'center center',
+        }}
+      />
+    ),
     { inline: true, propTables: [ProgressiveImage] },
   )
   .addWithInfo(
-    'Custim transition',
+    'With Styled-components',
     'Overrided with `transition: filter 1s linear;`',
     () => {
       const CoverProgressiveImage = styled(ProgressiveImage)`

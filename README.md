@@ -31,6 +31,24 @@ $ yarn add react-progressive-bg-image styled-components@next
 
 ## Usage
 
+### Case 1: Inline-style
+
+```js
+import ProgressiveImage from 'react-progressive-bg-image';
+
+<ProgressiveImage
+  src={image1}
+  placeholder={image1X60}
+  style={{
+    height: 600,
+    backgroundSize: 'contain',
+    backgroundPosition: 'center center',
+  }}
+/>
+```
+
+### Case 2: With Styled-components
+
 ```js
 import styled from 'styled-components';
 import ProgressiveImage from 'react-progressive-bg-image';
@@ -38,7 +56,7 @@ import ProgressiveImage from 'react-progressive-bg-image';
 const StyledProgressiveImage = styled(ProgressiveImage)`
   height: 600px;
   background-size: contain;
-  background-position-y: center;
+  background-position: center center;
 
   /* Overrided */
   transition: filter 1s linear;
