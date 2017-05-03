@@ -59,8 +59,13 @@ export const propStreamMapper$ = (
 const ProgressiveImage = componentFromStream(propStream => {
   return propStreamMapper$(
     propStream,
-  ).map(([{ placeholder, className }, image, isLoaded]) => (
-    <Img className={className} image={image} isLoaded={isLoaded} />
+  ).map(([{ placeholder, className, style }, image, isLoaded]) => (
+    <Img
+      className={className}
+      style={style}
+      image={image}
+      isLoaded={isLoaded}
+    />
   ));
 });
 

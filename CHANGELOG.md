@@ -4,6 +4,7 @@
 > Unreleased
 
 * test(rx): add marble testing
+* feat(style): add inline-style example.
 
 ## [v1.0.4]
 > May 03, 2017
