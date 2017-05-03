@@ -22,6 +22,16 @@ import loadImage from './loadImage';
 
 export const DELAY = 200;
 
+/**
+ * propStreamMapper$
+ * @param {Observable} propStream - Origin props passed in
+ * @param {function} imagePromise :: string => promise
+ * @param {number} t - delay in milliseconds
+ * @param {scheduler} - rx scheduler
+ * @return {Observable} Observable<object>
+ *
+ * @author Michael Hsu
+ */
 export const propStreamMapper$ = (
   propStream,
   imagePromise = loadImage,
