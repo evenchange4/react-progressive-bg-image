@@ -3,6 +3,9 @@
 ## [HEAD]
 > Unreleased
 
+## [v1.0.5]
+> May 03, 2017
+
 * test(rx): add marble testing
 * feat(style): add inline-style example.
 
