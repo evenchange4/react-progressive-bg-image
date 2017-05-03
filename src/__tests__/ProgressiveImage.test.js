@@ -33,7 +33,7 @@ it('should render <ProgressiveImage>', done => {
   }, 250);
 });
 
-it('should return correct status marble diagram', () => {
+it('should return correct props marble diagram', () => {
   const scheduler = new Rx.TestScheduler(jestRxAssert);
   const sourceMarble = 'x---------|';
   const resultMarble = '(12)-3--4-|';
