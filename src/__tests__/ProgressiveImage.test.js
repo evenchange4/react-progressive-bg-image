@@ -1,21 +1,9 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import ProgressiveImage, { Img, DELAY } from '../ProgressiveImage';
+import ProgressiveImage, { DELAY } from '../ProgressiveImage';
 
-it('should render <Img> with isLoaded prop', () => {
-  const wrapper = mount(
-    <Img image="image.jpg" isLoaded />,
-  );
-
-  expect(wrapper).toMatchSnapshot();
-})
-
-it('should render <Img> without isLoaded prop', () => {
-  const wrapper = mount(
-    <Img image="image.jpg" />,
-  );
-
-  expect(wrapper).toMatchSnapshot();
+it('should return DELAY constant', () => {
+  expect(DELAY).toBe(200);
 })
 
 it('should render <ProgressiveImage>', done => {
@@ -23,10 +11,10 @@ it('should render <ProgressiveImage>', done => {
     <ProgressiveImage src="origin.jpg" placeholder="small.jpg" />,
   );
 
-  expect(wrapper).toMatchSnapshot();
+  expect(wrapper).toMatchSnapshot('1. before resolving image');
 
   setTimeout(() => {
-    expect(wrapper).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot('2. after resolving image');
     done()
   }, 250)
 });
