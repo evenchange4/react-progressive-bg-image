@@ -6,26 +6,6 @@
 
 [![Dependency Status][dependency-badge]][dependency] [![devDependency Status][devDependency-badge]][devDependency] [![peerDependency Status][peerDependency-badge]][peerDependency]
 
-[build-badge]: https://img.shields.io/travis/evenchange4/react-progressive-bg-image/master.svg?style=flat-square
-[build]: https://travis-ci.org/evenchange4/react-progressive-bg-image
-
-[npm-badge]: https://img.shields.io/npm/v/react-progressive-bg-image.svg?style=flat-square
-[npm]: https://www.npmjs.org/package/react-progressive-bg-image
-
-[codecov-badge]: https://img.shields.io/codecov/c/github/evenchange4/react-progressive-bg-image.svg?style=flat-square
-[codecov]: https://codecov.io/github/evenchange4/react-progressive-bg-image?branch=master
-
-[npm-downloads]: https://img.shields.io/npm/dt/react-progressive-bg-image.svg?style=flat-square
-
-[license-badge]: https://img.shields.io/npm/l/react-progressive-bg-image.svg?style=flat-square
-[license]: http://michaelhsu.mit-license.org/
-
-[dependency-badge]: https://david-dm.org/evenchange4/react-progressive-bg-image.svg?style=flat-square
-[dependency]: https://david-dm.org/evenchange4/react-progressive-bg-image
-[devDependency-badge]: https://david-dm.org/evenchange4/react-progressive-bg-image/dev-status.svg?style=flat-square
-[devDependency]: https://david-dm.org/evenchange4/react-progressive-bg-image#info=devDependencies
-[peerDependency-badge]: https://david-dm.org/evenchange4/react-progressive-bg-image/peer-status.svg?style=flat-square
-[peerDependency]: https://david-dm.org/evenchange4/react-progressive-bg-image#info=peerDependencies
 [![prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 ## Demo
@@ -100,3 +80,19 @@ $ yarn run test:watch
 ## [LICENSE](LICENSE)
 
 MIT: [http://michaelhsu.mit-license.org](http://michaelhsu.mit-license.org)
+
+[build-badge]: https://img.shields.io/travis/evenchange4/react-progressive-bg-image/master.svg?style=flat-square
+[build]: https://travis-ci.org/evenchange4/react-progressive-bg-image
+[npm-badge]: https://img.shields.io/npm/v/react-progressive-bg-image.svg?style=flat-square
+[npm]: https://www.npmjs.org/package/react-progressive-bg-image
+[codecov-badge]: https://img.shields.io/codecov/c/github/evenchange4/react-progressive-bg-image.svg?style=flat-square
+[codecov]: https://codecov.io/github/evenchange4/react-progressive-bg-image?branch=master
+[npm-downloads]: https://img.shields.io/npm/dt/react-progressive-bg-image.svg?style=flat-square
+[license-badge]: https://img.shields.io/npm/l/react-progressive-bg-image.svg?style=flat-square
+[license]: http://michaelhsu.mit-license.org/
+[dependency-badge]: https://david-dm.org/evenchange4/react-progressive-bg-image.svg?style=flat-square
+[dependency]: https://david-dm.org/evenchange4/react-progressive-bg-image
+[devDependency-badge]: https://david-dm.org/evenchange4/react-progressive-bg-image/dev-status.svg?style=flat-square
+[devDependency]: https://david-dm.org/evenchange4/react-progressive-bg-image#info=devDependencies
+[peerDependency-badge]: https://david-dm.org/evenchange4/react-progressive-bg-image/peer-status.svg?style=flat-square
+[peerDependency]: https://david-dm.org/evenchange4/react-progressive-bg-image#info=peerDependencies
