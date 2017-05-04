@@ -8,9 +8,13 @@ exports[`1. before resolving image 1`] = `
   <Img
     image="small.jpg"
     isLoaded={false}
+    placeholder="small.jpg"
+    src="origin.jpg"
   >
     <div
       className="sc-bdVaJa eilCag"
+      placeholder="small.jpg"
+      src="origin.jpg"
     />
   </Img>
 </ProgressiveImage>
@@ -24,9 +28,13 @@ exports[`2. after resolving image 1`] = `
   <Img
     image="origin.jpg"
     isLoaded={true}
+    placeholder="small.jpg"
+    src="origin.jpg"
   >
     <div
       className="sc-bdVaJa lcptnG"
+      placeholder="small.jpg"
+      src="origin.jpg"
     />
   </Img>
 </ProgressiveImage>

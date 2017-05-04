@@ -1,6 +1,8 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import componentFromStream from 'recompose/componentFromStream';
+import compose from 'recompose/compose';
+import setDisplayName from 'recompose/setDisplayName';
+import setPropTypes from 'recompose/setPropTypes';
+import mapPropsStream from 'recompose/mapPropsStream';
 import { Observable } from 'rxjs/Observable';
 import { async } from 'rxjs/scheduler/async';
 import 'rxjs/add/operator/combineLatest';
@@ -23,22 +25,12 @@ import loadImage from './loadImage';
 
 export const DELAY = 200;
 
-/**
- * propStreamMapper$
- * @param {Observable} propStream - Origin props passed in
- * @param {function} imagePromise :: string => promise
- * @param {number} t - delay in milliseconds
- * @param {scheduler} - rx scheduler
- * @return {Observable} Observable<object>
- *
- * @author Michael Hsu
- */
-export const propStreamMapper$ = (
-  propStream,
-  imagePromise = loadImage,
-  t = DELAY,
-  scheduler = async,
-) => {
+export function ownerPropsToChildProps(
+  propStream, // ownerProps
+  imagePromise = loadImage, // :: string => promise
+  t = DELAY, // delay in milliseconds
+  scheduler = async, // rx scheduler
+) {
   const props$ = Observable.from(propStream);
   const placeholder$ = props$.pluck('placeholder');
   const src$ = props$.pluck('src').switchMap(imagePromise).startWith('');
@@ -53,26 +45,18 @@ export const propStreamMapper$ = (
 
   const image$ = placeholder$.merge(src$);
 
-  return props$.combineLatest(image$, isLoaded$);
-};
+  return props$.combineLatest(image$, isLoaded$, (props, image, isLoaded) => ({
+    ...props,
+    image,
+    isLoaded,
+  }));
+}
 
-const ProgressiveImage = componentFromStream(propStream => {
-  return propStreamMapper$(
-    propStream,
-  ).map(([{ placeholder, className, style }, image, isLoaded]) => (
-    <Img
-      className={className}
-      style={style}
-      image={image}
-      isLoaded={isLoaded}
-    />
-  ));
-});
-
-ProgressiveImage.displayName = 'ProgressiveImage';
-ProgressiveImage.propTypes = {
-  src: PropTypes.string.isRequired,
-  placeholder: PropTypes.string.isRequired,
-};
-
-export default ProgressiveImage;
+export default compose(
+  setDisplayName('ProgressiveImage'),
+  setPropTypes({
+    src: PropTypes.string.isRequired,
+    placeholder: PropTypes.string.isRequired,
+  }),
+  mapPropsStream(ownerPropsToChildProps),
+)(Img);
