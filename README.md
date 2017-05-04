@@ -33,6 +33,8 @@ $ yarn add react-progressive-bg-image styled-components@next
 
 ### Case 1: Inline-style
 
+> Remind: May need to setup autoprefixer in your project.
+
 ```js
 import ProgressiveImage from 'react-progressive-bg-image';
 

@@ -3,6 +3,8 @@
 ## [HEAD]
 > Unreleased
 
+* fix(rx): add test for loading the second image at same time.
+
 ## [v1.0.5]
 > May 03, 2017
 

@@ -12,6 +12,7 @@ import 'rxjs/add/operator/merge';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/switchMap';
 import 'rxjs/add/operator/mapTo';
+import 'rxjs/add/operator/switch';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/distinctUntilChanged';
 import 'rxjs/add/observable/from';
@@ -43,11 +44,10 @@ export const propStreamMapper$ = (
   const src$ = props$.pluck('src').switchMap(imagePromise).startWith('');
 
   const isLoaded$ = Observable.merge(
-    placeholder$.mapTo(false),
-    src$
-      .filter(src => !!src)
-      .switchMapTo(Observable.of(true).delay(t, scheduler)),
+    placeholder$.mapTo(Observable.of(false)),
+    src$.filter(src => !!src).mapTo(Observable.of(true).delay(t, scheduler)),
   )
+    .switch()
     .startWith(false)
     .distinctUntilChanged();
 
