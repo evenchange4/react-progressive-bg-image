@@ -3,6 +3,8 @@
 ## [HEAD]
 > Unreleased
 
+* refactor(recompose): switch to `mapPropsStream`.
+
 ## [v1.0.6]
 > May 04, 2017
 

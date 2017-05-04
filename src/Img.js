@@ -17,6 +17,8 @@ Img.displayName = 'Img';
 Img.propTypes = {
   image: PropTypes.string.isRequired,
   isLoaded: PropTypes.bool.isRequired,
+  className: PropTypes.string,
+  style: PropTypes.object,
 };
 
 export default Img;

@@ -4,7 +4,7 @@ import R from 'ramda';
 import { mount } from 'enzyme';
 import ProgressiveImage, {
   DELAY,
-  propStreamMapper$,
+  ownerPropsToChildProps,
 } from '../ProgressiveImage';
 
 const jestRxAssert = (actual, expected) => {
@@ -42,12 +42,17 @@ it('should return correct props marble diagram with one image', () => {
     x: props,
   });
   const mockImagePromise = src => Rx.Observable.of(src).delay(50, scheduler);
-  const source = propStreamMapper$(props$, mockImagePromise, 30, scheduler);
+  const source = ownerPropsToChildProps(
+    props$,
+    mockImagePromise,
+    30,
+    scheduler,
+  );
   const values = {
-    1: [props, '', false],
-    2: [props, 'small.jpg', false],
-    3: [props, 'origin.jpg', false],
-    4: [props, 'origin.jpg', true],
+    1: { ...props, image: '', isLoaded: false },
+    2: { ...props, image: 'small.jpg', isLoaded: false },
+    3: { ...props, image: 'origin.jpg', isLoaded: false },
+    4: { ...props, image: 'origin.jpg', isLoaded: true },
   };
   scheduler.expectObservable(source).toBe(resultMarble, values);
   scheduler.flush();
@@ -64,17 +69,22 @@ it('should return correct props marble diagram with two image', () => {
     y: props2,
   });
   const mockImagePromise = src => Rx.Observable.of(src).delay(50, scheduler);
-  const source = propStreamMapper$(props$, mockImagePromise, 30, scheduler);
+  const source = ownerPropsToChildProps(
+    props$,
+    mockImagePromise,
+    30,
+    scheduler,
+  );
   const values = {
-    1: [props1, '', false],
-    2: [props1, 'small.jpg', false],
-    3: [props1, 'origin.jpg', false],
-    4: [props1, 'origin.jpg', true],
-    a: [props2, 'origin.jpg', true],
-    b: [props2, 'small2.jpg', true],
-    c: [props2, 'small2.jpg', false],
-    d: [props2, 'origin2.jpg', false],
-    e: [props2, 'origin2.jpg', true],
+    1: { ...props1, image: '', isLoaded: false },
+    2: { ...props1, image: 'small.jpg', isLoaded: false },
+    3: { ...props1, image: 'origin.jpg', isLoaded: false },
+    4: { ...props1, image: 'origin.jpg', isLoaded: true },
+    a: { ...props2, image: 'origin.jpg', isLoaded: true },
+    b: { ...props2, image: 'small2.jpg', isLoaded: true },
+    c: { ...props2, image: 'small2.jpg', isLoaded: false },
+    d: { ...props2, image: 'origin2.jpg', isLoaded: false },
+    e: { ...props2, image: 'origin2.jpg', isLoaded: true },
   };
   scheduler.expectObservable(source).toBe(resultMarble, values);
   scheduler.flush();
@@ -91,15 +101,20 @@ it('should return correct props marble diagram with two image at loading time', 
     y: props2,
   });
   const mockImagePromise = src => Rx.Observable.of(src).delay(50, scheduler);
-  const source = propStreamMapper$(props$, mockImagePromise, 30, scheduler);
+  const source = ownerPropsToChildProps(
+    props$,
+    mockImagePromise,
+    30,
+    scheduler,
+  );
   const values = {
-    1: [props1, '', false],
-    2: [props1, 'small.jpg', false],
-    3: [props1, 'origin.jpg', false],
-    a: [props2, 'origin.jpg', false],
-    b: [props2, 'small2.jpg', false],
-    c: [props2, 'origin2.jpg', false],
-    d: [props2, 'origin2.jpg', true],
+    1: { ...props1, image: '', isLoaded: false },
+    2: { ...props1, image: 'small.jpg', isLoaded: false },
+    3: { ...props1, image: 'origin.jpg', isLoaded: false },
+    a: { ...props2, image: 'origin.jpg', isLoaded: false },
+    b: { ...props2, image: 'small2.jpg', isLoaded: false },
+    c: { ...props2, image: 'origin2.jpg', isLoaded: false },
+    d: { ...props2, image: 'origin2.jpg', isLoaded: true },
   };
   scheduler.expectObservable(source).toBe(resultMarble, values);
   scheduler.flush();
