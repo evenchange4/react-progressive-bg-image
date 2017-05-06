@@ -3,6 +3,9 @@
 ## [HEAD]
 > Unreleased
 
+## [v1.0.7]
+> May 06, 2017
+
 * refactor(recompose): switch to `mapPropsStream`.
 * chore(styled-components): update to rc.
 
