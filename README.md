@@ -1,6 +1,8 @@
 # react-progressive-bg-image
 
 > Medium style progressive background image for React based on [Styled-components](https://github.com/styled-components/styled-components).
+> 
+> Further reading: [Reproducing Medium Style Progressive Image Loading for React](https://medium.com/@evenchange4/reproducing-medium-style-progressive-image-loading-for-react-2e83bba0c608).
 
 [![Travis][build-badge]][build] [![Codecov Status][codecov-badge]][codecov] [![npm package][npm-badge]][npm] [![npm downloads][npm-downloads]][npm] [![license][license-badge]][license]
 
