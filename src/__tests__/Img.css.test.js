@@ -1,15 +1,20 @@
+/**
+* @jest-environment node
+*/
+
+import 'jest-styled-components'
 import React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import Img from '../Img';
 
 it('should render <Img> with isLoaded prop', () => {
   const component = <Img image="image.jpg" isLoaded />;
 
-  expect(mount(component)).toMatchSnapshot();
+  expect(shallow(component)).toMatchStyledComponentsSnapshot();
 });
 
 it('should render <Img> without isLoaded prop', () => {
   const component = <Img image="image.jpg" isLoaded={false} />;
 
-  expect(mount(component)).toMatchSnapshot();
+  expect(shallow(component)).toMatchStyledComponentsSnapshot();
 });

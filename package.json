@@ -27,6 +27,7 @@
     "format": "prettier --trailing-comma all --single-quote --write 'src/**/*.js' '.storybook/*.js'"
   },
   "dependencies": {
+    "jest-styled-components": "next",
     "prop-types": "^15.5.9",
     "recompose": "^0.23.1",
     "rxjs": "^5.4.0"
