@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render <Img> with isLoaded prop 1`] = `
+.eCbvYr {
+  height: 100%;
+  background-image: url(image.jpg);
+  background-repeat: no-repeat;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+  opacity: 1;
+  filter: none;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+<div
+  className="sc-bdVaJa eCbvYr"
+/>
+`;
+
+exports[`should render <Img> without isLoaded prop 1`] = `
+.gDpbjq {
+  height: 100%;
+  background-image: url(image.jpg);
+  background-repeat: no-repeat;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+  opacity: 0.5;
+  filter: blur(20px);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+<div
+  className="sc-bdVaJa gDpbjq"
+/>
+`;

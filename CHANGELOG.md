@@ -3,6 +3,9 @@
 ## [HEAD]
 > Unreleased
 
+chore(packages): yarn upgrade jest codecov prop-types rxjs
+test(jest-styled-components): introduce css snapshot
+
 ## [v1.0.7]
 > May 06, 2017
 
