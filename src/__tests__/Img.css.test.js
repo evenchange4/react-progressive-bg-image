@@ -2,7 +2,7 @@
 * @jest-environment node
 */
 
-import 'jest-styled-components'
+import 'jest-styled-components';
 import React from 'react';
 import { shallow } from 'enzyme';
 import Img from '../Img';
