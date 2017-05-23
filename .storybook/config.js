@@ -1,6 +1,6 @@
-import { configure, addDecorator, setAddon } from '@kadira/storybook';
-import infoAddon from '@kadira/react-storybook-addon-info';
-import { setOptions } from '@kadira/storybook-addon-options';
+import { configure, addDecorator, setAddon } from '@storybook/react';
+import infoAddon from '@storybook/addon-info';
+import { setOptions } from '@storybook/addon-options';
 import centered from './decorator-centered';
 
 const context = require.context('../src/', true, /\.example\.js$/);
