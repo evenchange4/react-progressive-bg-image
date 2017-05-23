@@ -3,6 +3,9 @@
 ## [HEAD]
 > Unreleased
 
+## [v1.1.0]
+> May 23, 2017
+
 * chore(packages): yarn upgrade jest codecov prop-types rxjs
 * test(jest-styled-components): introduce css snapshot
 * chore(storybook): upgrade to `3.0.0-alpha.4`
