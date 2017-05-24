@@ -3,6 +3,8 @@
 ## [HEAD]
 > Unreleased
 
+* chore(storybook): use `alpha` git-tag.
+
 ## [v1.1.0]
 > May 23, 2017
 

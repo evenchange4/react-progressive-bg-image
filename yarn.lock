@@ -11,7 +11,7 @@
     prop-types "^15.5.8"
     react-inspector "^2.0.0"
 
-"@storybook/addon-info@^3.0.0-alpha.4":
+"@storybook/addon-info@alpha":
   version "3.0.0-alpha.4"
   resolved "https://registry.yarnpkg.com/@storybook/addon-info/-/addon-info-3.0.0-alpha.4.tgz#119707f3136d4d3d668227ccda4a4cc20c17a3e8"
   dependencies:
@@ -24,11 +24,11 @@
   version "3.0.0-alpha.4"
   resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-3.0.0-alpha.4.tgz#04a254444a291f1019b389f013769c9c67d33778"
 
-"@storybook/addon-options@^3.0.0-alpha.4":
+"@storybook/addon-options@alpha":
   version "3.0.0-alpha.4"
   resolved "https://registry.yarnpkg.com/@storybook/addon-options/-/addon-options-3.0.0-alpha.4.tgz#de7f01b4f65c42d8c1ff414e81f955490c75e336"
 
-"@storybook/addon-storyshots@^3.0.0-alpha.4":
+"@storybook/addon-storyshots@alpha":
   version "3.0.0-alpha.4"
   resolved "https://registry.yarnpkg.com/@storybook/addon-storyshots/-/addon-storyshots-3.0.0-alpha.4.tgz#b6c65d9e201025e86381c1be196c7b2d18ba6373"
   dependencies:
@@ -60,7 +60,7 @@
     fuse.js "^3.0.1"
     prop-types "^15.5.9"
 
-"@storybook/react@^3.0.0-alpha.4":
+"@storybook/react@alpha":
   version "3.0.0-alpha.4"
   resolved "https://registry.yarnpkg.com/@storybook/react/-/react-3.0.0-alpha.4.tgz#bd1c4951b187e57e794115f127e574b3a38773e8"
   dependencies:
