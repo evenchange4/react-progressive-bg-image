@@ -28,8 +28,12 @@ $ yarn add react-progressive-bg-image styled-components@rc
 
 ## Requirements
 
+-   node >= 8.0.0
+-   npm >= 5.0.0
+-   yarn >= 0.24.6
+
 -   react `^15.5.4`
--   styled-components `^2.0.0-15`
+-   styled-components `^2.0.0`
 
 ## Usage
 
