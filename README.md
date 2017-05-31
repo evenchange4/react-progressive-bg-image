@@ -21,9 +21,9 @@
 ## Installation
 
 ```console
-$ npm i react-progressive-bg-image styled-components@rc --save
+$ npm i react-progressive-bg-image styled-components --save
 // or
-$ yarn add react-progressive-bg-image styled-components@rc
+$ yarn add react-progressive-bg-image styled-components
 ```
 
 ## Requirements
