@@ -3,7 +3,7 @@
 ## [HEAD]
 > Unreleased
 
-* chore(storybook): use `alpha` git-tag.
+* chore(env): use node 8 / npm 5 / styled-components 2 / storybook 3
 
 ## [v1.1.0]
 > May 23, 2017
