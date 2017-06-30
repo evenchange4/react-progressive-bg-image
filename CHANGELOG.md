@@ -3,6 +3,8 @@
 ## [HEAD]
 > Unreleased
 
+* chore(ncu): bump dependencies
+
 ## [v1.1.2]
 > Jun 30, 2017
 
