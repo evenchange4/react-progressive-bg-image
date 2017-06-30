@@ -3,6 +3,11 @@
 ## [HEAD]
 > Unreleased
 
+## [v1.1.2]
+> Jun 30, 2017
+
+* fix(SC): move dynamic props to style for safari flick issue
+
 ## [v1.1.1]
 > May 31, 2017
 

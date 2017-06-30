@@ -11,11 +11,27 @@ exports[`1. before resolving image 1`] = `
     placeholder="small.jpg"
     src="origin.jpg"
   >
-    <div
-      className="sc-bdVaJa eilCag"
+    <styled.div
+      isLoaded={false}
       placeholder="small.jpg"
       src="origin.jpg"
-    />
+      style={
+        Object {
+          "backgroundImage": "url(\\"small.jpg\\"",
+        }
+      }
+    >
+      <div
+        className="sc-bdVaJa lpfHmJ"
+        placeholder="small.jpg"
+        src="origin.jpg"
+        style={
+          Object {
+            "backgroundImage": "url(\\"small.jpg\\"",
+          }
+        }
+      />
+    </styled.div>
   </Img>
 </ProgressiveImage>
 `;
@@ -31,11 +47,27 @@ exports[`2. after resolving image 1`] = `
     placeholder="small.jpg"
     src="origin.jpg"
   >
-    <div
-      className="sc-bdVaJa lcptnG"
+    <styled.div
+      isLoaded={true}
       placeholder="small.jpg"
       src="origin.jpg"
-    />
+      style={
+        Object {
+          "backgroundImage": "url(\\"origin.jpg\\"",
+        }
+      }
+    >
+      <div
+        className="sc-bdVaJa eAwpDA"
+        placeholder="small.jpg"
+        src="origin.jpg"
+        style={
+          Object {
+            "backgroundImage": "url(\\"origin.jpg\\"",
+          }
+        }
+      />
+    </styled.div>
   </Img>
 </ProgressiveImage>
 `;

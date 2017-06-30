@@ -5,9 +5,23 @@ exports[`should render <Img> with isLoaded prop 1`] = `
   image="image.jpg"
   isLoaded={true}
 >
-  <div
-    className="sc-bdVaJa eCbvYr"
-  />
+  <styled.div
+    isLoaded={true}
+    style={
+      Object {
+        "backgroundImage": "url(\\"image.jpg\\"",
+      }
+    }
+  >
+    <div
+      className="sc-bdVaJa eAwpDA"
+      style={
+        Object {
+          "backgroundImage": "url(\\"image.jpg\\"",
+        }
+      }
+    />
+  </styled.div>
 </Img>
 `;
 
@@ -16,8 +30,22 @@ exports[`should render <Img> without isLoaded prop 1`] = `
   image="image.jpg"
   isLoaded={false}
 >
-  <div
-    className="sc-bdVaJa gDpbjq"
-  />
+  <styled.div
+    isLoaded={false}
+    style={
+      Object {
+        "backgroundImage": "url(\\"image.jpg\\"",
+      }
+    }
+  >
+    <div
+      className="sc-bdVaJa lpfHmJ"
+      style={
+        Object {
+          "backgroundImage": "url(\\"image.jpg\\"",
+        }
+      }
+    />
+  </styled.div>
 </Img>
 `;
