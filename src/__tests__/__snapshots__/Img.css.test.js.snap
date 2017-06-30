@@ -2,10 +2,11 @@
 
 exports[`should render <Img> with isLoaded prop 1`] = `
 <styled.div
-  isLoaded={true}
   style={
     Object {
       "backgroundImage": "url(\\"image.jpg\\"",
+      "filter": "none",
+      "opacity": 1,
     }
   }
 />
@@ -13,10 +14,11 @@ exports[`should render <Img> with isLoaded prop 1`] = `
 
 exports[`should render <Img> without isLoaded prop 1`] = `
 <styled.div
-  isLoaded={false}
   style={
     Object {
       "backgroundImage": "url(\\"image.jpg\\"",
+      "filter": "blur(20px)",
+      "opacity": 0.5,
     }
   }
 />

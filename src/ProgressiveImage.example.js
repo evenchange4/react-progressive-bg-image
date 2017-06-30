@@ -11,7 +11,7 @@ storiesOf('ProgressiveImage', module)
   .addWithInfo(
     'Inline-style',
     'Based on styled-components.',
-    () => (
+    () =>
       <ProgressiveImage
         src={image1}
         placeholder={image1X60}
@@ -20,8 +20,7 @@ storiesOf('ProgressiveImage', module)
           backgroundSize: 'contain',
           backgroundPosition: 'center center',
         }}
-      />
-    ),
+      />,
     { inline: true, propTables: [ProgressiveImage] },
   )
   .addWithInfo(

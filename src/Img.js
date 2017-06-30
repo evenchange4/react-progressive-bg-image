@@ -6,22 +6,18 @@ const StyledImg = styled.div`
   height: 100%;
   background-repeat: no-repeat;
   transition: opacity 0.3s linear;
-
-  opacity: ${props => (props.isLoaded ? 1 : 0.5)};
-  filter: ${props => (props.isLoaded ? 'none' : 'blur(20px)')};
-  /* this is needed so Safari keeps sharp edges */
-  transform: ${props => (props.isLoaded ? 'none' : 'scale(1)')};
 `;
 
-const Img = ({ image, style, ...otherProps }) => (
+const Img = ({ image, isLoaded, style, ...otherProps }) =>
   <StyledImg
     style={{
       ...style,
       backgroundImage: `url("${image}"`,
+      filter: isLoaded ? 'none' : 'blur(20px)',
+      opacity: isLoaded ? 1 : 0.5,
     }}
     {...otherProps}
-  />
-);
+  />;
 
 Img.displayName = 'Img';
 Img.propTypes = {
