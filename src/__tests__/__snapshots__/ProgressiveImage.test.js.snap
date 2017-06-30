@@ -12,22 +12,25 @@ exports[`1. before resolving image 1`] = `
     src="origin.jpg"
   >
     <styled.div
-      isLoaded={false}
       placeholder="small.jpg"
       src="origin.jpg"
       style={
         Object {
           "backgroundImage": "url(\\"small.jpg\\"",
+          "filter": "blur(20px)",
+          "opacity": 0.5,
         }
       }
     >
       <div
-        className="sc-bdVaJa lpfHmJ"
+        className="sc-bdVaJa cmnijN"
         placeholder="small.jpg"
         src="origin.jpg"
         style={
           Object {
             "backgroundImage": "url(\\"small.jpg\\"",
+            "filter": "blur(20px)",
+            "opacity": 0.5,
           }
         }
       />
@@ -48,22 +51,25 @@ exports[`2. after resolving image 1`] = `
     src="origin.jpg"
   >
     <styled.div
-      isLoaded={true}
       placeholder="small.jpg"
       src="origin.jpg"
       style={
         Object {
           "backgroundImage": "url(\\"origin.jpg\\"",
+          "filter": "none",
+          "opacity": 1,
         }
       }
     >
       <div
-        className="sc-bdVaJa eAwpDA"
+        className="sc-bdVaJa cmnijN"
         placeholder="small.jpg"
         src="origin.jpg"
         style={
           Object {
             "backgroundImage": "url(\\"origin.jpg\\"",
+            "filter": "none",
+            "opacity": 1,
           }
         }
       />
