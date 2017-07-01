@@ -82,6 +82,10 @@ const StyledProgressiveImage = styled(ProgressiveImage)`
 | ------------- | --------- | -------------- | ---------------- |
 | `src`         | string    | yes            | Origin image     |
 | `placeholder` | string    | yes            | Small image (Suggest inline base64)   |
+| `opacity`     | number    |                | default: 0.5     |
+| `blur`        | number    |                | default: 20      |
+| `scale`       | number    |                | default: 1       |
+
 
 ## Test
 

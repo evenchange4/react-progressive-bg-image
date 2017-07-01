@@ -3,7 +3,11 @@
 ## [HEAD]
 > Unreleased
 
+## [v1.1.3]
+> Jul 01, 2017
+
 * chore(ncu): bump dependencies
+* feat(props): support for custom blur / opacity / scale props.
 
 ## [v1.1.2]
 > Jun 30, 2017
