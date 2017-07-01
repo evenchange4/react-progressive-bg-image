@@ -17,7 +17,7 @@ const Img = ({ image, style, ...otherProps }) =>
   <StyledImg
     style={{
       ...style,
-      backgroundImage: `url("${image}"`,
+      backgroundImage: `url("${image}")`,
     }}
     {...otherProps}
   />;

@@ -33,7 +33,7 @@ exports[`1. before resolving image 1`] = `
         src="origin.jpg"
         style={
           Object {
-            "backgroundImage": "url(\\"small.jpg\\"",
+            "backgroundImage": "url(\\"small.jpg\\")",
           }
         }
       >
@@ -45,7 +45,7 @@ exports[`1. before resolving image 1`] = `
           src="origin.jpg"
           style={
             Object {
-              "backgroundImage": "url(\\"small.jpg\\"",
+              "backgroundImage": "url(\\"small.jpg\\")",
             }
           }
         />
@@ -88,7 +88,7 @@ exports[`2. after resolving image 1`] = `
         src="origin.jpg"
         style={
           Object {
-            "backgroundImage": "url(\\"origin.jpg\\"",
+            "backgroundImage": "url(\\"origin.jpg\\")",
           }
         }
       >
@@ -100,7 +100,7 @@ exports[`2. after resolving image 1`] = `
           src="origin.jpg"
           style={
             Object {
-              "backgroundImage": "url(\\"origin.jpg\\"",
+              "backgroundImage": "url(\\"origin.jpg\\")",
             }
           }
         />

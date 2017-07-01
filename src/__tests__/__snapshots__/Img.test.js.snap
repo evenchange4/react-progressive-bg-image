@@ -15,7 +15,7 @@ exports[`should render <Img> with isLoaded prop 1`] = `
     scale={1}
     style={
       Object {
-        "backgroundImage": "url(\\"image.jpg\\"",
+        "backgroundImage": "url(\\"image.jpg\\")",
       }
     }
   >
@@ -25,7 +25,7 @@ exports[`should render <Img> with isLoaded prop 1`] = `
       scale={1}
       style={
         Object {
-          "backgroundImage": "url(\\"image.jpg\\"",
+          "backgroundImage": "url(\\"image.jpg\\")",
         }
       }
     />
@@ -48,7 +48,7 @@ exports[`should render <Img> without isLoaded prop 1`] = `
     scale={1}
     style={
       Object {
-        "backgroundImage": "url(\\"image.jpg\\"",
+        "backgroundImage": "url(\\"image.jpg\\")",
       }
     }
   >
@@ -58,7 +58,7 @@ exports[`should render <Img> without isLoaded prop 1`] = `
       scale={1}
       style={
         Object {
-          "backgroundImage": "url(\\"image.jpg\\"",
+          "backgroundImage": "url(\\"image.jpg\\")",
         }
       }
     />
