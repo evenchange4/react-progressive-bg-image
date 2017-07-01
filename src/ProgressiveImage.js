@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import compose from 'recompose/compose';
 import setDisplayName from 'recompose/setDisplayName';
+import defaultProps from 'recompose/defaultProps';
 import setPropTypes from 'recompose/setPropTypes';
 import mapPropsStream from 'recompose/mapPropsStream';
 import { Observable } from 'rxjs/Observable';
@@ -57,6 +58,14 @@ export default compose(
   setPropTypes({
     src: PropTypes.string.isRequired,
     placeholder: PropTypes.string.isRequired,
+    opacity: PropTypes.number,
+    blur: PropTypes.number,
+    scale: PropTypes.number,
+  }),
+  defaultProps({
+    opacity: 0.5,
+    blur: 20,
+    scale: 1,
   }),
   mapPropsStream(ownerPropsToChildProps),
 )(Img);

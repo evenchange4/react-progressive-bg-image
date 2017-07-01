@@ -2,72 +2,110 @@
 
 exports[`1. before resolving image 1`] = `
 <ProgressiveImage
+  blur={20}
+  opacity={0.5}
   placeholder="small.jpg"
+  scale={1}
   src="origin.jpg"
 >
-  <Img
-    image="small.jpg"
-    isLoaded={false}
+  <mapPropsStream(Img)
+    blur={20}
+    opacity={0.5}
     placeholder="small.jpg"
+    scale={1}
     src="origin.jpg"
   >
-    <styled.div
+    <Img
+      blur={20}
+      image="small.jpg"
       isLoaded={false}
+      opacity={0.5}
       placeholder="small.jpg"
+      scale={1}
       src="origin.jpg"
-      style={
-        Object {
-          "backgroundImage": "url(\\"small.jpg\\"",
-        }
-      }
     >
-      <div
-        className="sc-bdVaJa lpfHmJ"
+      <styled.div
+        blur={20}
+        isLoaded={false}
+        opacity={0.5}
         placeholder="small.jpg"
+        scale={1}
         src="origin.jpg"
         style={
           Object {
             "backgroundImage": "url(\\"small.jpg\\"",
           }
         }
-      />
-    </styled.div>
-  </Img>
+      >
+        <div
+          className="sc-bdVaJa lpfHmJ"
+          opacity={0.5}
+          placeholder="small.jpg"
+          scale={1}
+          src="origin.jpg"
+          style={
+            Object {
+              "backgroundImage": "url(\\"small.jpg\\"",
+            }
+          }
+        />
+      </styled.div>
+    </Img>
+  </mapPropsStream(Img)>
 </ProgressiveImage>
 `;
 
 exports[`2. after resolving image 1`] = `
 <ProgressiveImage
+  blur={20}
+  opacity={0.5}
   placeholder="small.jpg"
+  scale={1}
   src="origin.jpg"
 >
-  <Img
-    image="origin.jpg"
-    isLoaded={true}
+  <mapPropsStream(Img)
+    blur={20}
+    opacity={0.5}
     placeholder="small.jpg"
+    scale={1}
     src="origin.jpg"
   >
-    <styled.div
+    <Img
+      blur={20}
+      image="origin.jpg"
       isLoaded={true}
+      opacity={0.5}
       placeholder="small.jpg"
+      scale={1}
       src="origin.jpg"
-      style={
-        Object {
-          "backgroundImage": "url(\\"origin.jpg\\"",
-        }
-      }
     >
-      <div
-        className="sc-bdVaJa eAwpDA"
+      <styled.div
+        blur={20}
+        isLoaded={true}
+        opacity={0.5}
         placeholder="small.jpg"
+        scale={1}
         src="origin.jpg"
         style={
           Object {
             "backgroundImage": "url(\\"origin.jpg\\"",
           }
         }
-      />
-    </styled.div>
-  </Img>
+      >
+        <div
+          className="sc-bdVaJa eAwpDA"
+          opacity={0.5}
+          placeholder="small.jpg"
+          scale={1}
+          src="origin.jpg"
+          style={
+            Object {
+              "backgroundImage": "url(\\"origin.jpg\\"",
+            }
+          }
+        />
+      </styled.div>
+    </Img>
+  </mapPropsStream(Img)>
 </ProgressiveImage>
 `;

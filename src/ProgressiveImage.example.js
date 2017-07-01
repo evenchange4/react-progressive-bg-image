@@ -11,7 +11,7 @@ storiesOf('ProgressiveImage', module)
   .addWithInfo(
     'Inline-style',
     'Based on styled-components.',
-    () => (
+    () =>
       <ProgressiveImage
         src={image1}
         placeholder={image1X60}
@@ -20,8 +20,7 @@ storiesOf('ProgressiveImage', module)
           backgroundSize: 'contain',
           backgroundPosition: 'center center',
         }}
-      />
-    ),
+      />,
     { inline: true, propTables: [ProgressiveImage] },
   )
   .addWithInfo(
@@ -41,5 +40,22 @@ storiesOf('ProgressiveImage', module)
       `;
       return <CoverProgressiveImage src={image2} placeholder={image2X60} />;
     },
+    { inline: true, propTables: [ProgressiveImage] },
+  )
+  .addWithInfo(
+    'With blur props',
+    'blur / opacity / scale',
+    () =>
+      <ProgressiveImage
+        src={image1}
+        placeholder={image1X60}
+        blur={2}
+        opacity={0.9}
+        style={{
+          height: 600,
+          backgroundSize: 'contain',
+          backgroundPosition: 'center center',
+        }}
+      />,
     { inline: true, propTables: [ProgressiveImage] },
   );
