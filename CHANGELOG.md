@@ -3,6 +3,11 @@
 ## [HEAD]
 > Unreleased
 
+## [v1.1.4]
+> Jul 01, 2017
+
+* fix(Image): missing close url `)`.
+
 ## [v1.1.3]
 > Jul 01, 2017
 
