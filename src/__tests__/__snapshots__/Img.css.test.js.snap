@@ -3,6 +3,7 @@
 exports[`should render <Img> with isLoaded prop 1`] = `
 <styled.div
   blur={2}
+  isCached={true}
   isLoaded={true}
   opacity={0.9}
   scale={1}
@@ -17,6 +18,7 @@ exports[`should render <Img> with isLoaded prop 1`] = `
 exports[`should render <Img> without isLoaded prop 1`] = `
 <styled.div
   blur={2}
+  isCached={false}
   isLoaded={false}
   opacity={0.9}
   scale={1}

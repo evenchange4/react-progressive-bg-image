@@ -3,6 +3,29 @@
 ## [HEAD]
 > Unreleased
 
+## [v2.0.0]
+> Jul 03, 2017
+
+* feat(cache): add new cache feature ([#24])
+
+### BREAKING CHANGES
+
+```diff
+<ProgressiveImage
+  src={image1}
+  placeholder={image1X60}
+  blur={2}
+  opacity={0.9}
++ transition="all 1s linear"
+  style={{
+    height: 600,
+    backgroundSize: 'contain',
+    backgroundPosition: 'center center',
+-   transition: 'all 1s linear',
+  }}
+/>,
+```
+
 ## [v1.1.4]
 > Jul 01, 2017
 

@@ -28,29 +28,43 @@ export const DELAY = 200;
 
 export function ownerPropsToChildProps(
   propStream, // ownerProps
-  imagePromise = loadImage, // :: string => promise
+  imagePromise = loadImage, // :: string => promise => ({ src, isCached })
   t = DELAY, // delay in milliseconds
   scheduler = async, // rx scheduler
 ) {
   const props$ = Observable.from(propStream);
   const placeholder$ = props$.pluck('placeholder');
-  const src$ = props$.pluck('src').switchMap(imagePromise).startWith('');
+  const imagePromise$ = props$
+    .pluck('src')
+    .switchMap(imagePromise)
+    .startWith({ src: '', isCached: false });
+
+  const src$ = imagePromise$.pluck('src').filter(src => !!src);
+  const isCached$ = imagePromise$.pluck('isCached').distinctUntilChanged();
 
   const isLoaded$ = Observable.merge(
     placeholder$.mapTo(Observable.of(false)),
-    src$.filter(src => !!src).mapTo(Observable.of(true).delay(t, scheduler)),
+    imagePromise$.map(({ isCached }) =>
+      Observable.of(true).delay(isCached ? 0 : t, scheduler),
+    ),
   )
     .switch()
     .startWith(false)
     .distinctUntilChanged();
 
-  const image$ = placeholder$.merge(src$);
+  const image$ = placeholder$.merge(src$).distinctUntilChanged();
 
-  return props$.combineLatest(image$, isLoaded$, (props, image, isLoaded) => ({
-    ...props,
-    image,
-    isLoaded,
-  }));
+  return props$.combineLatest(
+    image$,
+    isCached$,
+    isLoaded$,
+    (props, image, isCached, isLoaded) => ({
+      ...props,
+      image,
+      isCached,
+      isLoaded,
+    }),
+  );
 }
 
 export default compose(
@@ -66,6 +80,7 @@ export default compose(
     opacity: 0.5,
     blur: 20,
     scale: 1,
+    transition: 'opacity 0.3s linear',
   }),
   mapPropsStream(ownerPropsToChildProps),
 )(Img);
