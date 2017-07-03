@@ -34,23 +34,21 @@ storiesOf('ProgressiveImage', module)
         background-attachment: fixed;
         background-position-y: 70%;
         background-position-x: center;
-
-        /* Overrided */
-        transition: filter 1s linear;
       `;
       return <CoverProgressiveImage src={image2} placeholder={image2X60} />;
     },
     { inline: true, propTables: [ProgressiveImage] },
   )
   .addWithInfo(
-    'With blur props',
-    'blur / opacity / scale',
+    'With other props',
+    'blur / opacity / scale / transition',
     () =>
       <ProgressiveImage
         src={image1}
         placeholder={image1X60}
         blur={2}
         opacity={0.9}
+        transition="all 1s linear"
         style={{
           height: 600,
           backgroundSize: 'contain',

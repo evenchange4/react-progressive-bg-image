@@ -7,6 +7,7 @@ exports[`1. before resolving image 1`] = `
   placeholder="small.jpg"
   scale={1}
   src="origin.jpg"
+  transition="opacity 0.3s linear"
 >
   <mapPropsStream(Img)
     blur={20}
@@ -14,18 +15,22 @@ exports[`1. before resolving image 1`] = `
     placeholder="small.jpg"
     scale={1}
     src="origin.jpg"
+    transition="opacity 0.3s linear"
   >
     <Img
       blur={20}
       image="small.jpg"
+      isCached={false}
       isLoaded={false}
       opacity={0.5}
       placeholder="small.jpg"
       scale={1}
       src="origin.jpg"
+      transition="opacity 0.3s linear"
     >
       <styled.div
         blur={20}
+        isCached={false}
         isLoaded={false}
         opacity={0.5}
         placeholder="small.jpg"
@@ -36,6 +41,7 @@ exports[`1. before resolving image 1`] = `
             "backgroundImage": "url(\\"small.jpg\\")",
           }
         }
+        transition="opacity 0.3s linear"
       >
         <div
           className="sc-bdVaJa lpfHmJ"
@@ -62,6 +68,7 @@ exports[`2. after resolving image 1`] = `
   placeholder="small.jpg"
   scale={1}
   src="origin.jpg"
+  transition="opacity 0.3s linear"
 >
   <mapPropsStream(Img)
     blur={20}
@@ -69,38 +76,43 @@ exports[`2. after resolving image 1`] = `
     placeholder="small.jpg"
     scale={1}
     src="origin.jpg"
+    transition="opacity 0.3s linear"
   >
     <Img
       blur={20}
-      image="origin.jpg"
-      isLoaded={true}
+      image="small.jpg"
+      isCached={false}
+      isLoaded={false}
       opacity={0.5}
       placeholder="small.jpg"
       scale={1}
       src="origin.jpg"
+      transition="opacity 0.3s linear"
     >
       <styled.div
         blur={20}
-        isLoaded={true}
+        isCached={false}
+        isLoaded={false}
         opacity={0.5}
         placeholder="small.jpg"
         scale={1}
         src="origin.jpg"
         style={
           Object {
-            "backgroundImage": "url(\\"origin.jpg\\")",
+            "backgroundImage": "url(\\"small.jpg\\")",
           }
         }
+        transition="opacity 0.3s linear"
       >
         <div
-          className="sc-bdVaJa eAwpDA"
+          className="sc-bdVaJa lpfHmJ"
           opacity={0.5}
           placeholder="small.jpg"
           scale={1}
           src="origin.jpg"
           style={
             Object {
-              "backgroundImage": "url(\\"origin.jpg\\")",
+              "backgroundImage": "url(\\"small.jpg\\")",
             }
           }
         />

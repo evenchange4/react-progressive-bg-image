@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const StyledImg = styled.div`
   height: 100%;
   background-repeat: no-repeat;
-  transition: opacity 0.3s linear;
+  transition: ${props => (props.isCached ? 'none' : props.transition)};
 
   opacity: ${props => (props.isLoaded ? 1 : props.opacity)};
   filter: ${props => (props.isLoaded ? 'none' : `blur(${props.blur}px)`)};
@@ -27,12 +27,14 @@ Img.propTypes = {
   // Internal
   image: PropTypes.string.isRequired,
   isLoaded: PropTypes.bool.isRequired,
+  isCached: PropTypes.bool.isRequired,
 
   // props
   opacity: PropTypes.number.isRequired,
   blur: PropTypes.number.isRequired,
   scale: PropTypes.number.isRequired,
   className: PropTypes.string,
+  transition: PropTypes.string,
   style: PropTypes.object,
 };
 
