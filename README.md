@@ -84,6 +84,7 @@ const StyledProgressiveImage = styled(ProgressiveImage)`
 | `blur`        | number    |                | default: 20      |
 | `scale`       | number    |                | default: 1       |
 | `transition`  | string    |                | default: 'opacity 0.3s linear'  |
+| `component`   | string    |                | default: 'div'  |
 
 
 ## Test

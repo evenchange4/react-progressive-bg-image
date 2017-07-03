@@ -56,4 +56,20 @@ storiesOf('ProgressiveImage', module)
         }}
       />,
     { inline: true, propTables: [ProgressiveImage] },
+  )
+  .addWithInfo(
+    'With component props',
+    'Use <img> tag with src',
+    () =>
+      <ProgressiveImage
+        src={image1}
+        placeholder={image1X60}
+        component="img"
+        style={{
+          height: 600,
+          backgroundSize: 'contain',
+          backgroundPosition: 'center center',
+        }}
+      />,
+    { inline: true, propTables: [ProgressiveImage] },
   );

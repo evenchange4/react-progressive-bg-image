@@ -3,6 +3,7 @@
 exports[`1. before resolving image 1`] = `
 <ProgressiveImage
   blur={20}
+  component="div"
   opacity={0.5}
   placeholder="small.jpg"
   scale={1}
@@ -11,6 +12,7 @@ exports[`1. before resolving image 1`] = `
 >
   <mapPropsStream(Img)
     blur={20}
+    component="div"
     opacity={0.5}
     placeholder="small.jpg"
     scale={1}
@@ -19,6 +21,7 @@ exports[`1. before resolving image 1`] = `
   >
     <Img
       blur={20}
+      component="div"
       image="small.jpg"
       isCached={false}
       isLoaded={false}
@@ -28,8 +31,9 @@ exports[`1. before resolving image 1`] = `
       src="origin.jpg"
       transition="opacity 0.3s linear"
     >
-      <styled.div
+      <Styled(BaseComponent)
         blur={20}
+        component="div"
         isCached={false}
         isLoaded={false}
         opacity={0.5}
@@ -43,8 +47,12 @@ exports[`1. before resolving image 1`] = `
         }
         transition="opacity 0.3s linear"
       >
-        <div
+        <BaseComponent
+          blur={20}
           className="sc-bdVaJa lpfHmJ"
+          component="div"
+          isCached={false}
+          isLoaded={false}
           opacity={0.5}
           placeholder="small.jpg"
           scale={1}
@@ -54,8 +62,22 @@ exports[`1. before resolving image 1`] = `
               "backgroundImage": "url(\\"small.jpg\\")",
             }
           }
-        />
-      </styled.div>
+          transition="opacity 0.3s linear"
+        >
+          <div
+            className="sc-bdVaJa lpfHmJ"
+            opacity={0.5}
+            placeholder="small.jpg"
+            scale={1}
+            src="origin.jpg"
+            style={
+              Object {
+                "backgroundImage": "url(\\"small.jpg\\")",
+              }
+            }
+          />
+        </BaseComponent>
+      </Styled(BaseComponent)>
     </Img>
   </mapPropsStream(Img)>
 </ProgressiveImage>
@@ -64,6 +86,7 @@ exports[`1. before resolving image 1`] = `
 exports[`2. after resolving image 1`] = `
 <ProgressiveImage
   blur={20}
+  component="div"
   opacity={0.5}
   placeholder="small.jpg"
   scale={1}
@@ -72,6 +95,7 @@ exports[`2. after resolving image 1`] = `
 >
   <mapPropsStream(Img)
     blur={20}
+    component="div"
     opacity={0.5}
     placeholder="small.jpg"
     scale={1}
@@ -80,6 +104,7 @@ exports[`2. after resolving image 1`] = `
   >
     <Img
       blur={20}
+      component="div"
       image="small.jpg"
       isCached={false}
       isLoaded={false}
@@ -89,8 +114,9 @@ exports[`2. after resolving image 1`] = `
       src="origin.jpg"
       transition="opacity 0.3s linear"
     >
-      <styled.div
+      <Styled(BaseComponent)
         blur={20}
+        component="div"
         isCached={false}
         isLoaded={false}
         opacity={0.5}
@@ -104,8 +130,12 @@ exports[`2. after resolving image 1`] = `
         }
         transition="opacity 0.3s linear"
       >
-        <div
+        <BaseComponent
+          blur={20}
           className="sc-bdVaJa lpfHmJ"
+          component="div"
+          isCached={false}
+          isLoaded={false}
           opacity={0.5}
           placeholder="small.jpg"
           scale={1}
@@ -115,8 +145,22 @@ exports[`2. after resolving image 1`] = `
               "backgroundImage": "url(\\"small.jpg\\")",
             }
           }
-        />
-      </styled.div>
+          transition="opacity 0.3s linear"
+        >
+          <div
+            className="sc-bdVaJa lpfHmJ"
+            opacity={0.5}
+            placeholder="small.jpg"
+            scale={1}
+            src="origin.jpg"
+            style={
+              Object {
+                "backgroundImage": "url(\\"small.jpg\\")",
+              }
+            }
+          />
+        </BaseComponent>
+      </Styled(BaseComponent)>
     </Img>
   </mapPropsStream(Img)>
 </ProgressiveImage>

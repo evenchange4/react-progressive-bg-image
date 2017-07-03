@@ -4,7 +4,15 @@ import Img from '../Img';
 
 it('should render <Img> with isLoaded prop', () => {
   const component = (
-    <Img image="image.jpg" isLoaded blur={2} opacity={0.9} scale={1} isCached />
+    <Img
+      image="image.jpg"
+      isLoaded
+      blur={2}
+      opacity={0.9}
+      scale={1}
+      isCached
+      component="div"
+    />
   );
 
   expect(mount(component)).toMatchSnapshot();
@@ -19,6 +27,7 @@ it('should render <Img> without isLoaded prop', () => {
       opacity={0.9}
       scale={1}
       isCached={false}
+      component="img"
     />
   );
 

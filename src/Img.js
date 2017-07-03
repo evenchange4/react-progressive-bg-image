@@ -1,8 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import omit from 'ramda/src/omit';
 import styled from 'styled-components';
 
-const StyledImg = styled.div`
+const omitProps = omit(['blur', 'transition', 'isCached', 'isLoaded']);
+
+const BaseComponent = ({ component, children, ...otherProps }) =>
+  React.createElement(component, omitProps(otherProps), children);
+BaseComponent.displayName = 'BaseComponent';
+BaseComponent.propTypes = {
+  component: PropTypes.oneOfType([PropTypes.func, PropTypes.string]).isRequired,
+  children: PropTypes.node, // Remind: There is not a children for Input tag.
+};
+const StyledImg = styled(BaseComponent)`
   height: 100%;
   background-repeat: no-repeat;
   transition: ${props => (props.isCached ? 'none' : props.transition)};
@@ -13,11 +23,13 @@ const StyledImg = styled.div`
   transform: ${props => (props.isLoaded ? 'none' : `scale(${props.scale})`)};
 `;
 
-const Img = ({ image, style, ...otherProps }) =>
+const Img = ({ component, image, style, ...otherProps }) =>
   <StyledImg
+    component={component}
+    {...component === 'img' && { src: image }}
     style={{
       ...style,
-      backgroundImage: `url("${image}")`,
+      ...(component !== 'img' && { backgroundImage: `url("${image}")` }),
     }}
     {...otherProps}
   />;
@@ -36,6 +48,7 @@ Img.propTypes = {
   className: PropTypes.string,
   transition: PropTypes.string,
   style: PropTypes.object,
+  component: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
 };
 
 export default Img;
