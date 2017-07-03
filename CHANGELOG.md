@@ -3,12 +3,16 @@
 ## [HEAD]
 > Unreleased
 
-## [v2.0.1]
+## [v2.0.2]
 > Jul 03, 2017
 
 * feat(Img): Support for other Component based with `component` props.
 
 **BackgroundImage will cause flicking while changing at safari.**
+
+## [v2.0.1]
+
+Publish fail.
 
 ## [v2.0.0]
 > Jul 03, 2017
