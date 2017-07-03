@@ -65,14 +65,12 @@ const StyledProgressiveImage = styled(ProgressiveImage)`
   height: 600px;
   background-size: contain;
   background-position: center center;
-
-  /* Overrided */
-  transition: filter 1s linear;
 `;
 
 <StyledProgressiveImage
   src={IMAGE}
   placeholder={IMAGEX60}
+  transition="all 1s linear"
 />;
 ```
 
@@ -85,6 +83,7 @@ const StyledProgressiveImage = styled(ProgressiveImage)`
 | `opacity`     | number    |                | default: 0.5     |
 | `blur`        | number    |                | default: 20      |
 | `scale`       | number    |                | default: 1       |
+| `transition`  | string    |                | default: 'opacity 0.3s linear'  |
 
 
 ## Test
