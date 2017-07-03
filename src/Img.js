@@ -25,13 +25,13 @@ const StyledImg = styled(BaseComponent)`
 
 const Img = ({ component, image, style, ...otherProps }) =>
   <StyledImg
+    {...otherProps}
     component={component}
     {...component === 'img' && { src: image }}
     style={{
       ...style,
       ...(component !== 'img' && { backgroundImage: `url("${image}")` }),
     }}
-    {...otherProps}
   />;
 
 Img.displayName = 'Img';

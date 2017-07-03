@@ -3,6 +3,11 @@
 ## [HEAD]
 > Unreleased
 
+## [v2.0.3]
+> Jul 03, 2017
+
+* fix(Image): `src` override priority issue.
+
 ## [v2.0.2]
 > Jul 03, 2017
 
