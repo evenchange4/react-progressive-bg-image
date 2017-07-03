@@ -1,8 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render <Img> with isLoaded prop 1`] = `
-<styled.div
+<Styled(BaseComponent)
   blur={2}
+  component="div"
   isCached={true}
   isLoaded={true}
   opacity={0.9}
@@ -16,16 +17,14 @@ exports[`should render <Img> with isLoaded prop 1`] = `
 `;
 
 exports[`should render <Img> without isLoaded prop 1`] = `
-<styled.div
+<Styled(BaseComponent)
   blur={2}
+  component="img"
   isCached={false}
   isLoaded={false}
   opacity={0.9}
   scale={1}
-  style={
-    Object {
-      "backgroundImage": "url(\\"image.jpg\\")",
-    }
-  }
+  src="image.jpg"
+  style={Object {}}
 />
 `;

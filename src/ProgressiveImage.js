@@ -75,12 +75,14 @@ export default compose(
     opacity: PropTypes.number,
     blur: PropTypes.number,
     scale: PropTypes.number,
+    component: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
   }),
   defaultProps({
     opacity: 0.5,
     blur: 20,
     scale: 1,
     transition: 'opacity 0.3s linear',
+    component: 'div',
   }),
   mapPropsStream(ownerPropsToChildProps),
 )(Img);

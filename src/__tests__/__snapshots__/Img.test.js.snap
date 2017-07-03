@@ -3,14 +3,16 @@
 exports[`should render <Img> with isLoaded prop 1`] = `
 <Img
   blur={2}
+  component="div"
   image="image.jpg"
   isCached={true}
   isLoaded={true}
   opacity={0.9}
   scale={1}
 >
-  <styled.div
+  <Styled(BaseComponent)
     blur={2}
+    component="div"
     isCached={true}
     isLoaded={true}
     opacity={0.9}
@@ -21,8 +23,12 @@ exports[`should render <Img> with isLoaded prop 1`] = `
       }
     }
   >
-    <div
+    <BaseComponent
+      blur={2}
       className="sc-bdVaJa dvevVe"
+      component="div"
+      isCached={true}
+      isLoaded={true}
       opacity={0.9}
       scale={1}
       style={
@@ -30,42 +36,61 @@ exports[`should render <Img> with isLoaded prop 1`] = `
           "backgroundImage": "url(\\"image.jpg\\")",
         }
       }
-    />
-  </styled.div>
+    >
+      <div
+        className="sc-bdVaJa dvevVe"
+        opacity={0.9}
+        scale={1}
+        style={
+          Object {
+            "backgroundImage": "url(\\"image.jpg\\")",
+          }
+        }
+      />
+    </BaseComponent>
+  </Styled(BaseComponent)>
 </Img>
 `;
 
 exports[`should render <Img> without isLoaded prop 1`] = `
 <Img
   blur={2}
+  component="img"
   image="image.jpg"
   isCached={false}
   isLoaded={false}
   opacity={0.9}
   scale={1}
 >
-  <styled.div
+  <Styled(BaseComponent)
     blur={2}
+    component="img"
     isCached={false}
     isLoaded={false}
     opacity={0.9}
     scale={1}
-    style={
-      Object {
-        "backgroundImage": "url(\\"image.jpg\\")",
-      }
-    }
+    src="image.jpg"
+    style={Object {}}
   >
-    <div
+    <BaseComponent
+      blur={2}
       className="sc-bdVaJa klmwLC"
+      component="img"
+      isCached={false}
+      isLoaded={false}
       opacity={0.9}
       scale={1}
-      style={
-        Object {
-          "backgroundImage": "url(\\"image.jpg\\")",
-        }
-      }
-    />
-  </styled.div>
+      src="image.jpg"
+      style={Object {}}
+    >
+      <img
+        className="sc-bdVaJa klmwLC"
+        opacity={0.9}
+        scale={1}
+        src="image.jpg"
+        style={Object {}}
+      />
+    </BaseComponent>
+  </Styled(BaseComponent)>
 </Img>
 `;
