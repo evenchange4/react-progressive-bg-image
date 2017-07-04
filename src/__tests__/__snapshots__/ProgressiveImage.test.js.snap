@@ -66,9 +66,6 @@ exports[`1. before resolving image 1`] = `
         >
           <div
             className="sc-bdVaJa lpfHmJ"
-            opacity={0.5}
-            placeholder="small.jpg"
-            scale={1}
             src="origin.jpg"
             style={
               Object {
@@ -149,9 +146,6 @@ exports[`2. after resolving image 1`] = `
         >
           <div
             className="sc-bdVaJa lpfHmJ"
-            opacity={0.5}
-            placeholder="small.jpg"
-            scale={1}
             src="origin.jpg"
             style={
               Object {

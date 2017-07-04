@@ -3,7 +3,15 @@ import PropTypes from 'prop-types';
 import omit from 'ramda/src/omit';
 import styled from 'styled-components';
 
-const omitProps = omit(['blur', 'transition', 'isCached', 'isLoaded']);
+const omitProps = omit([
+  'blur',
+  'transition',
+  'isCached',
+  'isLoaded',
+  'opacity',
+  'scale',
+  'placeholder',
+]);
 
 const BaseComponent = ({ component, children, ...otherProps }) =>
   React.createElement(component, omitProps(otherProps), children);

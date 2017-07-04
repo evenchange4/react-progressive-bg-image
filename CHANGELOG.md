@@ -3,6 +3,12 @@
 ## [HEAD]
 > Unreleased
 
+## [v2.0.4]
+> Jul 04, 2017
+
+* fix(Image): remove useless props from BaseComponent.
+* chore(ncu): update styled-components to 2.1.1
+
 ## [v2.0.3]
 > Jul 03, 2017
 
