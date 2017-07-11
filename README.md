@@ -2,7 +2,7 @@
 
 > Medium style progressive background image for React based on [Styled-components](https://github.com/styled-components/styled-components).
 > 
-> Further reading: [Reproducing Medium Style Progressive Image Loading for React](https://medium.com/@evenchange4/reproducing-medium-style-progressive-image-loading-for-react-2e83bba0c608).
+
 
 [![Travis][build-badge]][build] [![Codecov Status][codecov-badge]][codecov] [![npm package][npm-badge]][npm] [![npm downloads][npm-downloads]][npm] [![license][license-badge]][license]
 
@@ -13,10 +13,16 @@
 
 ## Demo
 
--   http://react-progressive-bg-image.netlify.com/
--   Responsive example: http://michaelhsu.tw/ [[Source code]](https://github.com/evenchange4/michaelhsu.tw/blob/master/src/components/CoverImage.js#L37-L44)
+-   https://react-progressive-bg-image.netlify.com/
+-   Responsive example: https://michaelhsu.tw/ [[Source code]](https://github.com/evenchange4/michaelhsu.tw/blob/master/src/components/CoverImage.js#L37-L44)
+-   Img tag example: https://mcslite.netlify.com/ [[Source code]](https://github.com/MCS-Lite/mcs-lite/blob/master/packages/mcs-lite-landing-web/src/components/BackgroundImage/BackgroundImage.js)
 
 ![DEMO](./docs/demo.gif)
+
+## Further Reading: 
+
+- [[English] Reproducing Medium Style Progressive Image Loading for React](https://medium.com/@evenchange4/reproducing-medium-style-progressive-image-loading-for-react-2e83bba0c608).
+- [[中文] React Stack 開發體驗與優化策略](https://medium.com/@evenchange4/react-stack-%E9%96%8B%E7%99%BC%E9%AB%94%E9%A9%97%E8%88%87%E5%84%AA%E5%8C%96%E7%AD%96%E7%95%A5-b056da2fa0aa)
 
 ## Installation
 
