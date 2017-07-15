@@ -51,7 +51,7 @@
     "eslint-plugin-jsx-a11y": "^5.0.3",
     "eslint-plugin-react": "^7.1.0",
     "jest": "^20.0.4",
-    "jest-styled-components": "^3.1.5",
+    "jest-styled-components": "^4.0.0",
     "normalize.css": "^7.0.0",
     "prettier": "^1.5.2",
     "react": "^15.6.1",
