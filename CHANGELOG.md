@@ -3,6 +3,8 @@
 ## [HEAD]
 > Unreleased
 
+* chore(ncu): update jest-styled-components to 4
+
 ## [v2.0.4]
 > Jul 04, 2017
 

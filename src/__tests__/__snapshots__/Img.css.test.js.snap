@@ -1,30 +1,116 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render <Img> with isLoaded prop 1`] = `
-<Styled(BaseComponent)
+.c0 {
+  height: 100%;
+  background-repeat: no-repeat;
+  -webkit-transition: none;
+  transition: none;
+  opacity: 1;
+  filter: none;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+<Img
   blur={2}
   component="div"
+  image="image.jpg"
   isCached={true}
   isLoaded={true}
   opacity={0.9}
   scale={1}
-  style={
-    Object {
-      "backgroundImage": "url(\\"image.jpg\\")",
+>
+  <Styled(BaseComponent)
+    blur={2}
+    component="div"
+    isCached={true}
+    isLoaded={true}
+    opacity={0.9}
+    scale={1}
+    style={
+      Object {
+        "backgroundImage": "url(\\"image.jpg\\")",
+      }
     }
-  }
-/>
+  >
+    <BaseComponent
+      blur={2}
+      className="c0"
+      component="div"
+      isCached={true}
+      isLoaded={true}
+      opacity={0.9}
+      scale={1}
+      style={
+        Object {
+          "backgroundImage": "url(\\"image.jpg\\")",
+        }
+      }
+    >
+      <div
+        className="c0"
+        style={
+          Object {
+            "backgroundImage": "url(\\"image.jpg\\")",
+          }
+        }
+      />
+    </BaseComponent>
+  </Styled(BaseComponent)>
+</Img>
 `;
 
 exports[`should render <Img> without isLoaded prop 1`] = `
-<Styled(BaseComponent)
+.c0 {
+  height: 100%;
+  background-repeat: no-repeat;
+  -webkit-transition: ;
+  transition: ;
+  opacity: 0.9;
+  filter: blur(2px);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+<Img
   blur={2}
   component="img"
+  image="image.jpg"
   isCached={false}
   isLoaded={false}
   opacity={0.9}
   scale={1}
-  src="image.jpg"
-  style={Object {}}
-/>
+>
+  <Styled(BaseComponent)
+    blur={2}
+    component="img"
+    isCached={false}
+    isLoaded={false}
+    opacity={0.9}
+    scale={1}
+    src="image.jpg"
+    style={Object {}}
+  >
+    <BaseComponent
+      blur={2}
+      className="c0"
+      component="img"
+      isCached={false}
+      isLoaded={false}
+      opacity={0.9}
+      scale={1}
+      src="image.jpg"
+      style={Object {}}
+    >
+      <img
+        className="c0"
+        src="image.jpg"
+        style={Object {}}
+      />
+    </BaseComponent>
+  </Styled(BaseComponent)>
+</Img>
 `;
