@@ -1,3 +1,5 @@
+/* eslint consistent-return: 0 */
+
 const isCached = test => test.complete || test.width + test.height > 0;
 
 export default function loadImage(src) {

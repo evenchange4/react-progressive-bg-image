@@ -11,7 +11,7 @@ const jestRxAssert = (actual, expected) => {
   const isEqual = R.equals(actual, expected);
   if (!isEqual) {
     console.error('Actual:', actual, '\n\n', 'Expected:', expected); // eslint-disable-line
-    console.log(JSON.stringify(actual, null, 2));
+    console.log(JSON.stringify(actual, null, 2)); // eslint-disable-line
   }
   expect(isEqual).toBe(true);
 };
