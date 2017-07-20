@@ -1,7 +1,7 @@
 # react-progressive-bg-image
 
 > Medium style progressive background image for React based on [Styled-components](https://github.com/styled-components/styled-components).
-> 
+>
 
 
 [![Travis][build-badge]][build] [![Codecov Status][codecov-badge]][codecov] [![npm package][npm-badge]][npm] [![npm downloads][npm-downloads]][npm] [![license][license-badge]][license]
@@ -34,9 +34,9 @@ $ yarn add react-progressive-bg-image styled-components
 
 ## Requirements
 
--   node >= 8.0.0
--   npm >= 5.0.0
--   yarn >= 0.24.6
+-   node >= 8.1.4
+-   npm >= 5.0.3
+-   yarn >= 0.27.5
 
 -   react `^15.5.4`
 -   styled-components `^2.0.0`
