@@ -4,6 +4,7 @@
 > Unreleased
 
 * chore(ncu): update jest-styled-components to 4
+* chore(eslint): introduce airbnb & prettier eslint configs
 
 ## [v2.0.4]
 > Jul 04, 2017
