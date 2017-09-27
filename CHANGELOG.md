@@ -3,6 +3,12 @@
 ## [HEAD]
 > Unreleased
 
+
+## [v2.1.1]
+> Sep 27, 2017
+
+* fix(travis): npm release bug
+
 ## [v2.1.0]
 > Sep 27, 2017
 

@@ -25,7 +25,6 @@
     "test:watch": "npm run test -- --watch",
     "start": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "prepack": "npm run build",
     "eslint": "eslint ./",
     "format": "prettier --write 'src/**/*.js' '.storybook/*.js'"
   },

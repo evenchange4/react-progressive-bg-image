@@ -27,6 +27,7 @@ deploy:
     email: evenchange4@gmail.com
     api_key:
       secure: ZcYdZrpERXxBN6TzXDQrH+orxppvKXaGj/JhWtZFu6K0eVvORntMluywOpYhkfU+akrn4NjHlX67MRgkCxCIKmIl+rp36CDRC/X+L4y4Bd4VItOa4CNqG79s+es4JkyXa64lRnWlMNHUIEjoemqsP3Em/RVrBcQeDLwpO9VD4207eHwqEIiTttCCSVH9RZa251MDB8l9ArwKC343rfWyKgzd/DLag0NwUUPRFb2Et+z+SgfkrlYYoFkmuQt2V2PMnJfcw8Xx5nGG29saRKgEulmDtMuVneu38bhekZW/MS2zdHanfzs5tbXwHTjMWqq/1mIrHgxnhDpXfJ8YtIJlerpLBsHX35uWWhmetHXFCetZ1guWWIVfzBTMt9PlahCsiB30YC3PWLpWFWgi/XLBgPipfmFJ3YIeY/i0e1koJlWqy6L/TzrEkP2mNYFAo3b75YMDnrPmsrpLs10/THLwCW2gPBpPTkyKWY105E5ijdJghYpuOjY15i0VQTrRs3koBCmVewO5c1v47IpNMi1hhfi1UCaR+GUUHVPt6GF6tTSIa/PA2yS8l92/DLKQ6xO75Yggw88TdVGB+H0IJjm/bR+M/rQOMNPP48tXL254igFpMHf0aAFZ5jXbrxWIiulIh1homZGEJMhcw/qx90I/BbxHw7zazd9S6Y6i7gOfJV0=
+    skip_cleanup: true
     on:
       tags: true
       repo: evenchange4/react-progressive-bg-image
@@ -34,6 +35,7 @@ deploy:
 cache:
   yarn: true
   directories:
+    - "~/.yarn"
     - node_modules
 
 notifications:
