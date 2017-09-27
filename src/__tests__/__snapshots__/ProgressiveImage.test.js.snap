@@ -1,6 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`1. before resolving image 1`] = `
+.c0 {
+  height: 100%;
+  background-repeat: no-repeat;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+  opacity: 0.5;
+  -webkit-filter: blur(20px);
+  filter: blur(20px);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
 <ProgressiveImage
   blur={20}
   component="div"
@@ -49,7 +62,7 @@ exports[`1. before resolving image 1`] = `
       >
         <BaseComponent
           blur={20}
-          className="sc-bdVaJa lpfHmJ"
+          className="c0"
           component="div"
           isCached={false}
           isLoaded={false}
@@ -65,7 +78,7 @@ exports[`1. before resolving image 1`] = `
           transition="opacity 0.3s linear"
         >
           <div
-            className="sc-bdVaJa lpfHmJ"
+            className="c0"
             src="origin.jpg"
             style={
               Object {
@@ -81,6 +94,19 @@ exports[`1. before resolving image 1`] = `
 `;
 
 exports[`2. after resolving image 1`] = `
+.c0 {
+  height: 100%;
+  background-repeat: no-repeat;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+  opacity: 0.5;
+  -webkit-filter: blur(20px);
+  filter: blur(20px);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
 <ProgressiveImage
   blur={20}
   component="div"
@@ -129,7 +155,7 @@ exports[`2. after resolving image 1`] = `
       >
         <BaseComponent
           blur={20}
-          className="sc-bdVaJa lpfHmJ"
+          className="c0"
           component="div"
           isCached={false}
           isLoaded={false}
@@ -145,7 +171,7 @@ exports[`2. after resolving image 1`] = `
           transition="opacity 0.3s linear"
         >
           <div
-            className="sc-bdVaJa lpfHmJ"
+            className="c0"
             src="origin.jpg"
             style={
               Object {

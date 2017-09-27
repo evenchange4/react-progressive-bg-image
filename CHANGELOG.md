@@ -6,6 +6,11 @@
 * chore(ncu): update jest-styled-components to 4
 * chore(eslint): introduce airbnb & prettier eslint configs
 
+* chore(travis): setup auto release
+* docs(LICENSE): add LICENSE file
+* chore(package): ncu update React 16
+* style: update prettier
+
 ## [v2.0.4]
 > Jul 04, 2017
 

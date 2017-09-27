@@ -1,6 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render <Img> with isLoaded prop 1`] = `
+.c0 {
+  height: 100%;
+  background-repeat: no-repeat;
+  -webkit-transition: none;
+  transition: none;
+  opacity: 1;
+  -webkit-filter: none;
+  filter: none;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
 <Img
   blur={2}
   component="div"
@@ -25,7 +38,7 @@ exports[`should render <Img> with isLoaded prop 1`] = `
   >
     <BaseComponent
       blur={2}
-      className="sc-bdVaJa dvevVe"
+      className="c0"
       component="div"
       isCached={true}
       isLoaded={true}
@@ -38,7 +51,7 @@ exports[`should render <Img> with isLoaded prop 1`] = `
       }
     >
       <div
-        className="sc-bdVaJa dvevVe"
+        className="c0"
         style={
           Object {
             "backgroundImage": "url(\\"image.jpg\\")",
@@ -51,6 +64,17 @@ exports[`should render <Img> with isLoaded prop 1`] = `
 `;
 
 exports[`should render <Img> without isLoaded prop 1`] = `
+.c0 {
+  height: 100%;
+  background-repeat: no-repeat;
+  opacity: 0.9;
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
 <Img
   blur={2}
   component="img"
@@ -72,7 +96,7 @@ exports[`should render <Img> without isLoaded prop 1`] = `
   >
     <BaseComponent
       blur={2}
-      className="sc-bdVaJa klmwLC"
+      className="c0"
       component="img"
       isCached={false}
       isLoaded={false}
@@ -82,7 +106,7 @@ exports[`should render <Img> without isLoaded prop 1`] = `
       style={Object {}}
     >
       <img
-        className="sc-bdVaJa klmwLC"
+        className="c0"
         src="image.jpg"
         style={Object {}}
       />
