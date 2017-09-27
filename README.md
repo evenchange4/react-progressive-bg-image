@@ -7,6 +7,7 @@
 [![Codecov Status][codecov-badge]][codecov] 
 [![npm package][npm-badge]][npm] 
 [![npm downloads][npm-downloads]][npm] 
+[![node][node]]()
 
 [![Dependency Status][dependency-badge]][dependency]
 [![devDependency Status][devDependency-badge]][devDependency]
@@ -43,7 +44,7 @@ $ yarn add react-progressive-bg-image styled-components
 -   npm >= 5.3.0
 -   yarn >= 1.1.0
 
--   react `^15.5.4`
+-   react `^15.0.0 || ^16.0.0`,
 -   styled-components `^2.0.0`
 
 ## Usage
@@ -138,6 +139,7 @@ MIT: [http://michaelhsu.mit-license.org](http://michaelhsu.mit-license.org)
 [npm]: https://www.npmjs.org/package/react-progressive-bg-image
 [codecov-badge]: https://img.shields.io/codecov/c/github/evenchange4/react-progressive-bg-image.svg?style=flat-square
 [codecov]: https://codecov.io/github/evenchange4/react-progressive-bg-image?branch=master
+[node]: https://img.shields.io/node/v/react-progressive-bg-image.svg?style=flat-square
 [npm-downloads]: https://img.shields.io/npm/dt/react-progressive-bg-image.svg?style=flat-square
 [license-badge]: https://img.shields.io/npm/l/react-progressive-bg-image.svg?style=flat-square
 [license]: http://michaelhsu.mit-license.org/
@@ -147,7 +149,7 @@ MIT: [http://michaelhsu.mit-license.org](http://michaelhsu.mit-license.org)
 [devDependency]: https://david-dm.org/evenchange4/react-progressive-bg-image#info=devDependencies
 [peerDependency-badge]: https://david-dm.org/evenchange4/react-progressive-bg-image/peer-status.svg?style=flat-square
 [peerDependency]: https://david-dm.org/evenchange4/react-progressive-bg-image#info=peerDependencies
-[greenkeeper-badge]: https://badges.greenkeeper.io/evenchange4/micro-medium-api.svg
+[greenkeeper-badge]: https://badges.greenkeeper.io/evenchange4/react-progressive-bg-image.svg?style=flat-square
 [greenkeeper]: https://greenkeeper.io/
 [prettier-badge]: https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=flat-square
 [prettier]: https://github.com/prettier/prettier
