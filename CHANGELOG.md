@@ -9,7 +9,7 @@
 * chore(travis): setup auto release
 * docs(LICENSE): add LICENSE file
 * chore(package): ncu update React 16
-* style: update prettier
+* style: update prettier & extract prettier config
 * chore(env): use node 8.6.0 & yarn 1.1.0
 
 ## [v2.0.4]

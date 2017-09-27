@@ -27,7 +27,7 @@
     "build-storybook": "build-storybook",
     "prepack": "npm run build",
     "eslint": "eslint ./",
-    "format": "prettier --trailing-comma all --single-quote --write 'src/**/*.js' '.storybook/*.js'"
+    "format": "prettier --write 'src/**/*.js' '.storybook/*.js'"
   },
   "dependencies": {
     "prop-types": "^15.6.0",
@@ -103,6 +103,10 @@
       "enzyme-to-json/serializer"
     ]
   },
+  "prettier": {
+    "trailingComma": "all",
+    "singleQuote": true
+  },
   "eslintConfig": {
     "parser": "babel-eslint",
     "extends": [
@@ -133,13 +137,7 @@
       "jsx-a11y/no-static-element-interactions": 0,
       "react/forbid-prop-types": 0,
       "react/require-default-props": 0,
-      "prettier/prettier": [
-        "error",
-        {
-          "singleQuote": true,
-          "trailingComma": "all"
-        }
-      ]
+      "prettier/prettier": "error"
     }
   }
 }
