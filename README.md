@@ -3,13 +3,19 @@
 > Medium style progressive background image for React based on [Styled-components](https://github.com/styled-components/styled-components).
 >
 
+[![Travis][build-badge]][build] 
+[![Codecov Status][codecov-badge]][codecov] 
+[![npm package][npm-badge]][npm] 
+[![npm downloads][npm-downloads]][npm] 
+[![node][node]]()
 
-[![Travis][build-badge]][build] [![Codecov Status][codecov-badge]][codecov] [![npm package][npm-badge]][npm] [![npm downloads][npm-downloads]][npm] [![license][license-badge]][license]
+[![Dependency Status][dependency-badge]][dependency]
+[![devDependency Status][devDependency-badge]][devDependency]
+[![peerDependency Status][peerDependency-badge]][peerDependency]
 
-[![Dependency Status][dependency-badge]][dependency] [![devDependency Status][devDependency-badge]][devDependency] [![peerDependency Status][peerDependency-badge]][peerDependency]
-
-[![Greenkeeper badge](https://badges.greenkeeper.io/evenchange4/react-progressive-bg-image.svg)](https://greenkeeper.io/)
-[![prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+[![Greenkeeper badge][greenkeeper-badge]][greenkeeper]
+[![prettier][prettier-badge]][prettier]
+[![license][license-badge]][license]
 
 ## Demo
 
@@ -34,11 +40,11 @@ $ yarn add react-progressive-bg-image styled-components
 
 ## Requirements
 
--   node >= 8.1.4
--   npm >= 5.0.3
--   yarn >= 0.27.5
+-   node >= 8.6.0
+-   npm >= 5.3.0
+-   yarn >= 1.1.0
 
--   react `^15.5.4`
+-   react `^15.0.0 || ^16.0.0`,
 -   styled-components `^2.0.0`
 
 ## Usage
@@ -101,6 +107,13 @@ $ yarn run eslint
 $ yarn run test:watch
 ```
 
+## Github release / NPM release
+ 
+```
+$ npm version patch
+$ git push
+```
+
 ---
 
 ## Inspiration
@@ -126,6 +139,7 @@ MIT: [http://michaelhsu.mit-license.org](http://michaelhsu.mit-license.org)
 [npm]: https://www.npmjs.org/package/react-progressive-bg-image
 [codecov-badge]: https://img.shields.io/codecov/c/github/evenchange4/react-progressive-bg-image.svg?style=flat-square
 [codecov]: https://codecov.io/github/evenchange4/react-progressive-bg-image?branch=master
+[node]: https://img.shields.io/node/v/react-progressive-bg-image.svg?style=flat-square
 [npm-downloads]: https://img.shields.io/npm/dt/react-progressive-bg-image.svg?style=flat-square
 [license-badge]: https://img.shields.io/npm/l/react-progressive-bg-image.svg?style=flat-square
 [license]: http://michaelhsu.mit-license.org/
@@ -135,3 +149,7 @@ MIT: [http://michaelhsu.mit-license.org](http://michaelhsu.mit-license.org)
 [devDependency]: https://david-dm.org/evenchange4/react-progressive-bg-image#info=devDependencies
 [peerDependency-badge]: https://david-dm.org/evenchange4/react-progressive-bg-image/peer-status.svg?style=flat-square
 [peerDependency]: https://david-dm.org/evenchange4/react-progressive-bg-image#info=peerDependencies
+[greenkeeper-badge]: https://badges.greenkeeper.io/evenchange4/react-progressive-bg-image.svg?style=flat-square
+[greenkeeper]: https://greenkeeper.io/
+[prettier-badge]: https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=flat-square
+[prettier]: https://github.com/prettier/prettier

@@ -7,6 +7,7 @@ exports[`should render <Img> with isLoaded prop 1`] = `
   -webkit-transition: none;
   transition: none;
   opacity: 1;
+  -webkit-filter: none;
   filter: none;
   -webkit-transform: none;
   -ms-transform: none;
@@ -66,9 +67,8 @@ exports[`should render <Img> without isLoaded prop 1`] = `
 .c0 {
   height: 100%;
   background-repeat: no-repeat;
-  -webkit-transition: ;
-  transition: ;
   opacity: 0.9;
+  -webkit-filter: blur(2px);
   filter: blur(2px);
   -webkit-transform: scale(1);
   -ms-transform: scale(1);

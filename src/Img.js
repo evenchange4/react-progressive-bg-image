@@ -31,7 +31,7 @@ const StyledImg = styled(BaseComponent)`
   transform: ${props => (props.isLoaded ? 'none' : `scale(${props.scale})`)};
 `;
 
-const Img = ({ component, image, style, ...otherProps }) =>
+const Img = ({ component, image, style, ...otherProps }) => (
   <StyledImg
     {...otherProps}
     component={component}
@@ -40,7 +40,8 @@ const Img = ({ component, image, style, ...otherProps }) =>
       ...style,
       ...(component !== 'img' && { backgroundImage: `url("${image}")` }),
     }}
-  />;
+  />
+);
 
 Img.displayName = 'Img';
 Img.propTypes = {

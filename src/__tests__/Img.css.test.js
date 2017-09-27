@@ -1,4 +1,3 @@
-import 'jest-styled-components';
 import React from 'react';
 import { mount } from 'enzyme';
 import Img from '../Img';
