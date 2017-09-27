@@ -10,7 +10,7 @@
 * docs(LICENSE): add LICENSE file
 * chore(package): ncu update React 16
 * style: update prettier & extract prettier config
-* chore(env): use node 8.6.0 & yarn 1.1.0
+* chore(env): use node 8.6.0 & yarn 1.1.0 & add nvmrc for netlify
 
 ## [v2.0.4]
 > Jul 04, 2017
