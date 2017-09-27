@@ -3,6 +3,9 @@
 ## [HEAD]
 > Unreleased
 
+## [v2.1.0]
+> Sep 27, 2017
+
 * chore(ncu): update jest-styled-components to 4
 * chore(eslint): introduce airbnb & prettier eslint configs
 
