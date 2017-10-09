@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "prop-types": "^15.6.0",
-    "ramda": "^0.24.1",
+    "ramda": "^0.25.0",
     "recompose": "^0.25.1",
     "rxjs": "^5.4.3"
   },
