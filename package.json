@@ -43,7 +43,7 @@
     "babel-eslint": "^8.0.1",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react-app": "^3.0.3",
-    "codecov": "^2.3.0",
+    "codecov": "^3.0.0",
     "enzyme": "^3.0.0",
     "enzyme-adapter-react-16": "^1.0.0",
     "enzyme-to-json": "^3.0.1",
