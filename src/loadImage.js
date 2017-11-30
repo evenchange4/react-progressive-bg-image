@@ -5,7 +5,7 @@ const isCached = test => test.complete || test.width + test.height > 0;
 export default function loadImage(src) {
   return new Promise((resolve, reject) => {
     // server side support
-    (typeof Image == 'undefined') && return resolve({ src, isCached: false });
+    if(typeof Image == 'undefined') return resolve({ src, isCached: false });
     
     const image = new Image();
     image.src = src;
