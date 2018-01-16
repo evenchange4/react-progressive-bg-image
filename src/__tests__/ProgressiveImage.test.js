@@ -1,6 +1,6 @@
 import React from 'react';
 import Rx from 'rxjs';
-import R from 'ramda';
+import * as R from 'ramda';
 import { mount } from 'enzyme';
 import ProgressiveImage, {
   DELAY,

@@ -8,31 +8,32 @@
     "url": "https://github.com/evenchange4/react-progressive-bg-image/issues",
     "email": "evenchange4@gmail.com"
   },
-  "homepage": "https://github.com/evenchange4/react-progressive-bg-image#readme",
-  "files": [
-    "lib"
-  ],
+  "homepage":
+    "https://github.com/evenchange4/react-progressive-bg-image#readme",
+  "files": ["lib"],
   "engines": {
-    "node": ">=8.0.0"
+    "node": ">=9.0.0"
   },
   "main": "lib/index.js",
   "license": "MIT",
   "scripts": {
     "clean": "rm -rf lib",
     "prebuild": "npm run clean",
-    "build": "NODE_ENV=production babel src --out-dir lib --ignore example.js,test.js",
+    "build":
+      "NODE_ENV=production babel src --out-dir lib --ignore example.js,test.js",
     "test": "NODE_ENV='test' jest --coverage --runInBand",
     "test:watch": "npm run test -- --watch",
     "start": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "eslint": "eslint ./",
-    "format": "prettier --write 'src/**/*.js' '.storybook/*.js'"
+    "precommit": "lint-staged",
+    "format": "prettier --write 'src/**/*.js' '.storybook/*.js' '*.{md,json}'"
   },
   "dependencies": {
-    "prop-types": "^15.6.0",
-    "ramda": "^0.24.1",
-    "recompose": "^0.25.1",
-    "rxjs": "^5.4.3"
+    "prop-types": "15.6.0",
+    "ramda": "0.25.0",
+    "recompose": "0.26.0",
+    "rxjs": "5.5.6"
   },
   "devDependencies": {
     "@storybook/addon-info": "3.3.9",
@@ -43,25 +44,24 @@
     "babel-eslint": "8.2.1",
     "babel-preset-env": "1.6.1",
     "babel-preset-react-app": "3.1.1",
-    "codecov": "2.3.1",
+    "codecov": "3.0.0",
     "enzyme": "3.3.0",
     "enzyme-adapter-react-16": "1.1.1",
     "enzyme-to-json": "3.3.0",
     "eslint": "4.15.0",
-    "eslint-config-airbnb": "15.1.0",
+    "eslint-config-airbnb": "16.1.0",
     "eslint-config-prettier": "2.9.0",
-    "eslint-config-react-app": "2.1.0",
-    "eslint-plugin-flowtype": "2.41.0",
     "eslint-plugin-import": "2.8.0",
     "eslint-plugin-jest": "21.6.2",
-    "eslint-plugin-jsx-a11y": "5.1.1",
+    "eslint-plugin-jsx-a11y": "6.0.3",
     "eslint-plugin-prettier": "2.5.0",
     "eslint-plugin-react": "7.5.1",
-    "jest": "21.2.1",
+    "husky": "0.14.3",
+    "jest": "22.1.1",
     "jest-styled-components": "4.10.0",
+    "lint-staged": "6.0.0",
     "normalize.css": "7.0.0",
     "prettier": "1.10.2",
-    "raf": "3.4.0",
     "react": "16.2.0",
     "react-dom": "16.2.0",
     "react-test-renderer": "16.2.0",
@@ -86,40 +86,30 @@
   },
   "jest": {
     "setupTestFrameworkScriptFile": "<rootDir>/setupTests.js",
-    "setupFiles": [
-      "raf/polyfill"
-    ],
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}",
       "!src/**/*.test.{js,jsx}",
       "!src/**/*.example.{js,jsx}"
     ],
-    "testPathIgnorePatterns": [
-      "<rootDir>/node_modules/",
-      "<rootDir>/lib/"
-    ],
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
-    ]
+    "testPathIgnorePatterns": ["<rootDir>/node_modules/", "<rootDir>/lib/"],
+    "snapshotSerializers": ["enzyme-to-json/serializer"]
   },
   "prettier": {
     "trailingComma": "all",
     "singleQuote": true
   },
+  "lint-staged": {
+    "*.{js,json,md}": ["prettier --write", "git add"]
+  },
   "eslintConfig": {
     "parser": "babel-eslint",
     "extends": [
-      "react-app",
       "airbnb",
       "prettier",
-      "prettier/flowtype",
       "prettier/react",
       "plugin:jest/recommended"
     ],
-    "plugins": [
-      "prettier",
-      "jest"
-    ],
+    "plugins": ["prettier", "jest"],
     "env": {
       "jest/globals": true
     },
@@ -127,9 +117,7 @@
       "react/jsx-filename-extension": [
         1,
         {
-          "extensions": [
-            ".js"
-          ]
+          "extensions": [".js"]
         }
       ],
       "import/no-extraneous-dependencies": 0,
