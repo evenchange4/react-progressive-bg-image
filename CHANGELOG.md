@@ -4,6 +4,10 @@
 
 > Unreleased
 
+## [v2.1.2]
+
+> Jan 16, 2018
+
 * chore(ncu): ncu update
 
 ## [v2.1.1]
