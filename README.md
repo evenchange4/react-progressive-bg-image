@@ -1,34 +1,32 @@
 # react-progressive-bg-image
 
 > Medium style progressive background image for React based on [Styled-components](https://github.com/styled-components/styled-components).
->
 
-[![Travis][build-badge]][build] 
-[![Codecov Status][codecov-badge]][codecov] 
-[![npm package][npm-badge]][npm] 
-[![npm downloads][npm-downloads]][npm] 
+[![Travis][build-badge]][build]
+[![Codecov Status][codecov-badge]][codecov]
+[![npm package][npm-badge]][npm]
+[![npm downloads][npm-downloads]][npm]
 [![node][node]]()
 
 [![Dependency Status][dependency-badge]][dependency]
-[![devDependency Status][devDependency-badge]][devDependency]
-[![peerDependency Status][peerDependency-badge]][peerDependency]
+[![devDependency Status][devdependency-badge]][devdependency]
+[![peerDependency Status][peerdependency-badge]][peerdependency]
 
-[![Greenkeeper badge][greenkeeper-badge]][greenkeeper]
 [![prettier][prettier-badge]][prettier]
 [![license][license-badge]][license]
 
 ## Demo
 
--   https://react-progressive-bg-image.netlify.com/
--   Responsive example: https://michaelhsu.tw/ [[Source code]](https://github.com/evenchange4/michaelhsu.tw/blob/master/src/components/CoverImage.js#L37-L44)
--   Img tag example: https://mcslite.netlify.com/ [[Source code]](https://github.com/MCS-Lite/mcs-lite/blob/master/packages/mcs-lite-landing-web/src/components/BackgroundImage/BackgroundImage.js)
+* https://react-progressive-bg-image.netlify.com/
+* Responsive example: https://michaelhsu.tw/ [[Source code]](https://github.com/evenchange4/michaelhsu.tw/blob/master/src/components/CoverImage.js#L37-L44)
+* Img tag example: https://mcslite.netlify.com/ [[Source code]](https://github.com/MCS-Lite/mcs-lite/blob/master/packages/mcs-lite-landing-web/src/components/BackgroundImage/BackgroundImage.js)
 
 ![DEMO](./docs/demo.gif)
 
-## Further Reading: 
+## Further Reading:
 
-- [[English] Reproducing Medium Style Progressive Image Loading for React](https://medium.com/@evenchange4/reproducing-medium-style-progressive-image-loading-for-react-2e83bba0c608).
-- [[中文] React Stack 開發體驗與優化策略](https://medium.com/@evenchange4/react-stack-%E9%96%8B%E7%99%BC%E9%AB%94%E9%A9%97%E8%88%87%E5%84%AA%E5%8C%96%E7%AD%96%E7%95%A5-b056da2fa0aa)
+* [[English] Reproducing Medium Style Progressive Image Loading for React](https://medium.com/@evenchange4/reproducing-medium-style-progressive-image-loading-for-react-2e83bba0c608).
+* [[中文] React Stack 開發體驗與優化策略](https://medium.com/@evenchange4/react-stack-%E9%96%8B%E7%99%BC%E9%AB%94%E9%A9%97%E8%88%87%E5%84%AA%E5%8C%96%E7%AD%96%E7%95%A5-b056da2fa0aa)
 
 ## Installation
 
@@ -40,12 +38,11 @@ $ yarn add react-progressive-bg-image styled-components
 
 ## Requirements
 
--   node >= 8.6.0
--   npm >= 5.3.0
--   yarn >= 1.1.0
+* node >= 9.4.0
+* yarn >= 1.3.2
 
--   react `^15.0.0 || ^16.0.0`,
--   styled-components `^2.0.0`
+* react `^15.0.0 || ^16.0.0`,
+* styled-components `^2.0.0`
 
 ## Usage
 
@@ -64,7 +61,7 @@ import ProgressiveImage from 'react-progressive-bg-image';
     backgroundSize: 'contain',
     backgroundPosition: 'center center',
   }}
-/>
+/>;
 ```
 
 ### Case 2: With Styled-components
@@ -88,16 +85,15 @@ const StyledProgressiveImage = styled(ProgressiveImage)`
 
 ## Property
 
-| **Prop**      |  **Type** |  **Required**  |  **Description** |
-| ------------- | --------- | -------------- | ---------------- |
-| `src`         | string    | yes            | Origin image     |
-| `placeholder` | string    | yes            | Small image (Suggest inline base64)   |
-| `opacity`     | number    |                | default: 0.5     |
-| `blur`        | number    |                | default: 20      |
-| `scale`       | number    |                | default: 1       |
-| `transition`  | string    |                | default: 'opacity 0.3s linear'  |
-| `component`   | string    |                | default: 'div'  |
-
+| **Prop**      | **Type** | **Required** | **Description**                     |
+| ------------- | -------- | ------------ | ----------------------------------- |
+| `src`         | string   | yes          | Origin image                        |
+| `placeholder` | string   | yes          | Small image (Suggest inline base64) |
+| `opacity`     | number   |              | default: 0.5                        |
+| `blur`        | number   |              | default: 20                         |
+| `scale`       | number   |              | default: 1                          |
+| `transition`  | string   |              | default: 'opacity 0.3s linear'      |
+| `component`   | string   |              | default: 'div'                      |
 
 ## Test
 
@@ -108,7 +104,7 @@ $ yarn run test:watch
 ```
 
 ## Github release / NPM release
- 
+
 ```
 $ npm version patch
 $ git push
@@ -118,14 +114,14 @@ $ git push
 
 ## Inspiration
 
-- https://github.com/FormidableLabs/react-progressive-image
-- [How Medium does progressive image loading](https://jmperezperez.com/medium-image-progressive-loading-placeholder/)
+* https://github.com/FormidableLabs/react-progressive-image
+* [How Medium does progressive image loading](https://jmperezperez.com/medium-image-progressive-loading-placeholder/)
 
 ## CONTRIBUTING
 
-*   ⇄ Pull requests and ★ Stars are always welcome.
-*   For bugs and feature requests, please create an issue.
-*   Pull requests must be accompanied by passing automated tests (`$ yarn run test`).
+* ⇄ Pull requests and ★ Stars are always welcome.
+* For bugs and feature requests, please create an issue.
+* Pull requests must be accompanied by passing automated tests (`$ yarn run test`).
 
 ## [CHANGELOG](CHANGELOG.md)
 
@@ -145,11 +141,9 @@ MIT: [http://michaelhsu.mit-license.org](http://michaelhsu.mit-license.org)
 [license]: http://michaelhsu.mit-license.org/
 [dependency-badge]: https://david-dm.org/evenchange4/react-progressive-bg-image.svg?style=flat-square
 [dependency]: https://david-dm.org/evenchange4/react-progressive-bg-image
-[devDependency-badge]: https://david-dm.org/evenchange4/react-progressive-bg-image/dev-status.svg?style=flat-square
-[devDependency]: https://david-dm.org/evenchange4/react-progressive-bg-image#info=devDependencies
-[peerDependency-badge]: https://david-dm.org/evenchange4/react-progressive-bg-image/peer-status.svg?style=flat-square
-[peerDependency]: https://david-dm.org/evenchange4/react-progressive-bg-image#info=peerDependencies
-[greenkeeper-badge]: https://badges.greenkeeper.io/evenchange4/react-progressive-bg-image.svg?style=flat-square
-[greenkeeper]: https://greenkeeper.io/
+[devdependency-badge]: https://david-dm.org/evenchange4/react-progressive-bg-image/dev-status.svg?style=flat-square
+[devdependency]: https://david-dm.org/evenchange4/react-progressive-bg-image#info=devDependencies
+[peerdependency-badge]: https://david-dm.org/evenchange4/react-progressive-bg-image/peer-status.svg?style=flat-square
+[peerdependency]: https://david-dm.org/evenchange4/react-progressive-bg-image#info=peerDependencies
 [prettier-badge]: https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=flat-square
 [prettier]: https://github.com/prettier/prettier

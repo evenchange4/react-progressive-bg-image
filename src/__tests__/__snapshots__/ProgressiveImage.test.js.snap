@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`1. before resolving image 1`] = `
+exports[`should render <ProgressiveImage>: 1. before resolving image 1`] = `
 .c0 {
   height: 100%;
   background-repeat: no-repeat;
@@ -93,7 +93,7 @@ exports[`1. before resolving image 1`] = `
 </ProgressiveImage>
 `;
 
-exports[`2. after resolving image 1`] = `
+exports[`should render <ProgressiveImage>: 2. after resolving image 1`] = `
 .c0 {
   height: 100%;
   background-repeat: no-repeat;
