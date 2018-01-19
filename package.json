@@ -36,10 +36,10 @@
     "rxjs": "5.5.6"
   },
   "devDependencies": {
-    "@storybook/addon-info": "3.3.9",
-    "@storybook/addon-options": "3.3.9",
-    "@storybook/addon-storyshots": "3.3.9",
-    "@storybook/react": "3.3.9",
+    "@storybook/addon-info": "3.3.10",
+    "@storybook/addon-options": "3.3.10",
+    "@storybook/addon-storyshots": "3.3.10",
+    "@storybook/react": "3.3.10",
     "babel-cli": "6.26.0",
     "babel-eslint": "8.2.1",
     "babel-preset-env": "1.6.1",
