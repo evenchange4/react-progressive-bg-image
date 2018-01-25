@@ -4,6 +4,12 @@
 
 > Unreleased
 
+## [v2.1.3]
+
+> Jan 25, 2018
+
+* fix(dependency): pinOnlyDevDependencies
+
 ## [v2.1.2]
 
 > Jan 16, 2018
