@@ -1,9 +1,10 @@
+// @flow
 import { configure, addDecorator, setAddon } from '@storybook/react';
 import infoAddon from '@storybook/addon-info';
 import { setOptions } from '@storybook/addon-options';
 import centered from './decorator-centered';
 
-const context = require.context('../src/', true, /\.example\.js$/);
+const context = (require: any).context('../src/', true, /\.example\.js$/);
 
 setAddon(infoAddon);
 addDecorator(centered);
