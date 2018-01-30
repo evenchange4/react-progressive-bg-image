@@ -1,4 +1,5 @@
-import React from 'react';
+// @flow
+import * as React from 'react';
 import PropTypes from 'prop-types';
 import omit from 'ramda/src/omit';
 import styled from 'styled-components';
@@ -31,14 +32,23 @@ const StyledImg = styled(BaseComponent)`
   transform: ${props => (props.isLoaded ? 'none' : `scale(${props.scale})`)};
 `;
 
-const Img = ({ component, image, style, ...otherProps }) => (
+const Img = ({
+  component,
+  image,
+  style,
+  ...otherProps
+}: {
+  component: React.Node,
+  image: string,
+  style: Object,
+}) => (
   <StyledImg
     {...otherProps}
     component={component}
-    {...component === 'img' && { src: image }}
+    {...(component === 'img' ? { src: image } : {})}
     style={{
       ...style,
-      ...(component !== 'img' && { backgroundImage: `url("${image}")` }),
+      ...(component === 'img' ? {} : { backgroundImage: `url("${image}")` }),
     }}
   />
 );

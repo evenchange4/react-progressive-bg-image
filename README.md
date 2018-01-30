@@ -29,9 +29,7 @@
 
 ## Installation
 
-```console
-$ npm i react-progressive-bg-image styled-components --save
-// or
+```sh
 $ yarn add react-progressive-bg-image styled-components
 ```
 
@@ -40,8 +38,8 @@ $ yarn add react-progressive-bg-image styled-components
 * node >= 9.4.0
 * yarn >= 1.3.2
 
-* react `^15.0.0 || ^16.0.0`,
-* styled-components `^2.0.0`
+* react `^16.0.0`,
+* styled-components `^3`
 
 ## Usage
 

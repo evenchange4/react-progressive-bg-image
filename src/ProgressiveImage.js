@@ -1,13 +1,13 @@
+// @flow
 import PropTypes from 'prop-types';
 import compose from 'recompose/compose';
 import setDisplayName from 'recompose/setDisplayName';
 import defaultProps from 'recompose/defaultProps';
 import setPropTypes from 'recompose/setPropTypes';
 import mapPropsStream from 'recompose/mapPropsStream';
-import { Observable } from 'rxjs/Observable';
+import { Observable, type Observable as ObservableType } from 'rxjs/Observable';
 import { async } from 'rxjs/scheduler/async';
 import 'rxjs/add/operator/combineLatest';
-import 'rxjs/add/operator/pluck';
 import 'rxjs/add/operator/startWith';
 import 'rxjs/add/operator/switchMapTo';
 import 'rxjs/add/operator/delay';
@@ -22,25 +22,42 @@ import 'rxjs/add/observable/from';
 import 'rxjs/add/observable/of';
 import 'rxjs/add/observable/merge';
 import Img from './Img';
-import loadImage from './loadImage';
+import loadImage, { type LoadImage } from './loadImage';
 
 export const DELAY = 200;
 
 export function ownerPropsToChildProps(
-  propStream, // ownerProps
-  imagePromise = loadImage, // :: string => promise => ({ src, isCached })
-  t = DELAY, // delay in milliseconds
-  scheduler = async, // rx scheduler
-) {
+  propStream: Observable<{
+    src: string,
+    placeholder: string,
+    opacity: number,
+    blur: number,
+    scale: number,
+    component: React.Node,
+  }>, // ownerProps
+  load: LoadImage = loadImage,
+  t: number = DELAY, // delay in milliseconds
+  scheduler: any = async, // rx scheduler
+): ObservableType<{
+  src: string,
+  placeholder: string,
+  opacity: number,
+  blur: number,
+  scale: number,
+  component: React.Node,
+  image: string,
+  isCached: boolean,
+  isLoaded: boolean,
+}> {
   const props$ = Observable.from(propStream);
-  const placeholder$ = props$.pluck('placeholder');
+  const placeholder$ = props$.map(e => e.placeholder);
   const imagePromise$ = props$
-    .pluck('src')
-    .switchMap(imagePromise)
+    .map(e => e.src)
+    .switchMap(load)
     .startWith({ src: '', isCached: false });
 
-  const src$ = imagePromise$.pluck('src').filter(src => !!src);
-  const isCached$ = imagePromise$.pluck('isCached').distinctUntilChanged();
+  const src$ = imagePromise$.map(e => e.src).filter(src => !!src);
+  const isCached$ = imagePromise$.map(e => e.isCached).distinctUntilChanged();
 
   const isLoaded$ = Observable.merge(
     placeholder$.mapTo(Observable.of(false)),
