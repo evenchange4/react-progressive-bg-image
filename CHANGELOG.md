@@ -1,7 +1,9 @@
 ## Change Log
 
-### upcoming (2018/01/30 13:50 +00:00)
+### v3.0.0 (2018/01/30 14:06 +00:00)
 
+* [3a5d8c3](https://github.com/evenchange4/react-progressive-bg-image/commit/3a5d8c34eb4ce852b8a21bdc70acdd86fa668562) 3.0.0 (@evenchange4)
+* [#82](https://github.com/evenchange4/react-progressive-bg-image/pull/82) feat(npm): upgrade peer style-components to v3 [BREAKING CHANGES](#82) (@evenchange4)
 * [#78](https://github.com/evenchange4/react-progressive-bg-image/pull/78) chore(deps): update dependency lint-staged to v6.1.0 (#78) (@renovate[bot])
 * [#77](https://github.com/evenchange4/react-progressive-bg-image/pull/77) chore(deps): update dependency eslint-plugin-react to v7.6.0 (#77) (@renovate[bot])
 
