@@ -62,7 +62,7 @@
     "react": "16.2.0",
     "react-dom": "16.2.0",
     "react-test-renderer": "16.2.0",
-    "styled-components": "3.1.4"
+    "styled-components": "3.4.10"
   },
   "babel": {
     "presets": [
