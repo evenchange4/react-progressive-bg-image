@@ -6,12 +6,14 @@
   "license": "MIT",
   "typings": "./index.d.ts",
   "main": "lib/index.js",
-  "files": ["lib", "index.d.ts"],
+  "files": [
+    "lib",
+    "index.d.ts"
+  ],
   "scripts": {
     "clean": "rm -rf lib",
     "prebuild": "npm run clean",
-    "build":
-      "NODE_ENV=production babel src --out-dir lib --ignore '**/*.example.js,**/__tests__/*'",
+    "build": "NODE_ENV=production babel src --out-dir lib --ignore '**/*.example.js,**/__tests__/*'",
     "test": "NODE_ENV='test' jest --coverage --runInBand",
     "test:watch": "npm run test -- --watch",
     "start": "start-storybook -p 6006",
@@ -20,14 +22,13 @@
     "flow": "flow",
     "precommit": "lint-staged",
     "format": "prettier --write 'src/**/*.js' '.storybook/*.js' '*.{md,json}'",
-    "changelog":
-      "github-changes -o evenchange4 -r react-progressive-bg-image -b master -f ./CHANGELOG.md --order-semver --use-commit-body"
+    "changelog": "github-changes -o evenchange4 -r react-progressive-bg-image -b master -f ./CHANGELOG.md --order-semver --use-commit-body"
   },
   "dependencies": {
     "prop-types": "^15.6.0",
     "ramda": "^0.25.0",
     "recompose": "^0.26.0",
-    "rxjs": "^5.5.6"
+    "rxjs": "^6.0.0"
   },
   "devDependencies": {
     "@storybook/addon-info": "3.3.12",
@@ -84,8 +85,13 @@
       "!src/**/*.test.js",
       "!src/**/*.example.js"
     ],
-    "testPathIgnorePatterns": ["<rootDir>/node_modules/", "<rootDir>/lib/"],
-    "snapshotSerializers": ["enzyme-to-json/serializer"],
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/lib/"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
     "resetMocks": true,
     "resetModules": true
   },
@@ -94,7 +100,10 @@
     "singleQuote": true
   },
   "lint-staged": {
-    "*.{js,json,md}": ["prettier --write", "git add"]
+    "*.{js,json,md}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "eslintConfig": {
     "parser": "babel-eslint",
@@ -106,7 +115,11 @@
       "prettier/react",
       "prettier/flowtype"
     ],
-    "plugins": ["prettier", "jest", "flowtype"],
+    "plugins": [
+      "prettier",
+      "jest",
+      "flowtype"
+    ],
     "env": {
       "jest/globals": true
     },
@@ -114,7 +127,9 @@
       "react/jsx-filename-extension": [
         1,
         {
-          "extensions": [".js"]
+          "extensions": [
+            ".js"
+          ]
         }
       ],
       "import/no-extraneous-dependencies": 0,
@@ -135,8 +150,7 @@
     "url": "https://github.com/evenchange4/react-progressive-bg-image/issues",
     "email": "evenchange4@gmail.com"
   },
-  "homepage":
-    "https://github.com/evenchange4/react-progressive-bg-image#readme",
+  "homepage": "https://github.com/evenchange4/react-progressive-bg-image#readme",
   "repository": {
     "type": "git",
     "url": "https://github.com/evenchange4/react-progressive-bg-image.git"

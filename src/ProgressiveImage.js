@@ -1,3 +1,5 @@
+import { from, merge, of, Observable, type, Observable as ObservableType } from 'rxjs';
+import {map, switchMap, startWith, filter, distinctUntilChanged, mapTo, delay, switchAll} from 'rxjs/operators';
 // @flow
 import PropTypes from 'prop-types';
 import compose from 'recompose/compose';
@@ -5,22 +7,7 @@ import setDisplayName from 'recompose/setDisplayName';
 import defaultProps from 'recompose/defaultProps';
 import setPropTypes from 'recompose/setPropTypes';
 import mapPropsStream from 'recompose/mapPropsStream';
-import { Observable, type Observable as ObservableType } from 'rxjs/Observable';
 import { async } from 'rxjs/scheduler/async';
-import 'rxjs/add/operator/combineLatest';
-import 'rxjs/add/operator/startWith';
-import 'rxjs/add/operator/switchMapTo';
-import 'rxjs/add/operator/delay';
-import 'rxjs/add/operator/merge';
-import 'rxjs/add/operator/filter';
-import 'rxjs/add/operator/switchMap';
-import 'rxjs/add/operator/mapTo';
-import 'rxjs/add/operator/switch';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/distinctUntilChanged';
-import 'rxjs/add/observable/from';
-import 'rxjs/add/observable/of';
-import 'rxjs/add/observable/merge';
 import Img from './Img';
 import loadImage, { type LoadImage } from './loadImage';
 
@@ -49,27 +36,20 @@ export function ownerPropsToChildProps(
   isCached: boolean,
   isLoaded: boolean,
 }> {
-  const props$ = Observable.from(propStream);
-  const placeholder$ = props$.map(e => e.placeholder);
-  const imagePromise$ = props$
-    .map(e => e.src)
-    .switchMap(load)
-    .startWith({ src: '', isCached: false });
+  const props$ = from(propStream);
+  const placeholder$ = props$.pipe(map(e => e.placeholder));
+  const imagePromise$ = props$.pipe(map(e => e.src), switchMap(load), startWith({ src: '', isCached: false }));
 
-  const src$ = imagePromise$.map(e => e.src).filter(src => !!src);
-  const isCached$ = imagePromise$.map(e => e.isCached).distinctUntilChanged();
+  const src$ = imagePromise$.pipe(map(e => e.src), filter(src => !!src));
+  const isCached$ = imagePromise$.pipe(map(e => e.isCached), distinctUntilChanged());
 
-  const isLoaded$ = Observable.merge(
-    placeholder$.mapTo(Observable.of(false)),
-    imagePromise$.map(({ isCached }) =>
-      Observable.of(true).delay(isCached ? 0 : t, scheduler),
-    ),
-  )
-    .switch()
-    .startWith(false)
-    .distinctUntilChanged();
+  const isLoaded$ = merge(
+    placeholder$.pipe(mapTo(of(false))),
+    imagePromise$.pipe(map(({ isCached }) =>
+      of(true).pipe(delay(isCached ? 0 : t, scheduler)))),
+  ).pipe(switchAll(), startWith(false), distinctUntilChanged());
 
-  const image$ = placeholder$.merge(src$).distinctUntilChanged();
+  const image$ = merge(placeholder$, src$).pipe(distinctUntilChanged());
 
   return props$.combineLatest(
     image$,
