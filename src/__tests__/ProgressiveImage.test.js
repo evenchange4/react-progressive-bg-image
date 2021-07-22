@@ -1,5 +1,6 @@
+import {delay} from 'rxjs/operators';
 import React from 'react';
-import Rx from 'rxjs';
+import * as Rx from 'rxjs'
 import * as R from 'ramda';
 import { mount } from 'enzyme';
 import ProgressiveImage, {
@@ -42,7 +43,7 @@ it('should return correct props marble diagram without caching', () => {
     x: props,
   });
   const mockImagePromise = src =>
-    Rx.Observable.of({ src, isCached: false }).delay(50, scheduler);
+    Rx.of({ src, isCached: false }).pipe(delay(50, scheduler));
   const source = ownerPropsToChildProps(
     props$,
     mockImagePromise,
@@ -67,7 +68,7 @@ it('should return correct props marble diagram with caching', () => {
     x: props,
   });
   const mockImagePromise = src =>
-    Rx.Observable.of({ src, isCached: true }).delay(50, scheduler);
+    Rx.of({ src, isCached: true }).pipe(delay(50, scheduler));
   const source = ownerPropsToChildProps(
     props$,
     mockImagePromise,
@@ -95,7 +96,7 @@ it('should return correct props marble diagram with two image', () => {
     y: props2,
   });
   const mockImagePromise = src =>
-    Rx.Observable.of({ src, isCached: false }).delay(50, scheduler);
+    Rx.of({ src, isCached: false }).pipe(delay(50, scheduler));
   const source = ownerPropsToChildProps(
     props$,
     mockImagePromise,
@@ -127,7 +128,7 @@ it('should return correct props marble diagram with two image at loading time', 
     y: props2,
   });
   const mockImagePromise = src =>
-    Rx.Observable.of({ src, isCached: false }).delay(50, scheduler);
+    Rx.of({ src, isCached: false }).pipe(delay(50, scheduler));
   const source = ownerPropsToChildProps(
     props$,
     mockImagePromise,
