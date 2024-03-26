@@ -51,7 +51,7 @@
     "eslint-plugin-jsx-a11y": "6.0.3",
     "eslint-plugin-prettier": "2.6.0",
     "eslint-plugin-react": "7.6.1",
-    "flow-bin": "0.65.0",
+    "flow-bin": "0.232.0",
     "github-changes": "1.1.2",
     "husky": "0.14.3",
     "jest": "22.1.4",
